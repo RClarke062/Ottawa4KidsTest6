@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ottawa4KidsTest6</string>
+    <string-array name="outsidestuff_array">
+        <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.447292|-75.736883,list of other addresses,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.405411|-75.624797,list of other addresses,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Vertical Reality,http://www.verticalreal.com/home/index_e.php,45.419446|-75.715649,list of other addresses,set of pictures</item>
+    </string-array>
+
+    <string-array name="details_array">
+        <item>WebSite</item>
+        <item>Where is It</item>
+        <item>Side Trips for Adults</item>
+        <item>Whats Cool</item>
+    </string-array>
+    <string name="title_activity_where">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
