@@ -16,23 +16,7 @@ import java.util.HashSet;
 public class MainActivity extends ListActivity {
 
     String[] outsidestuff;
-    String[] Row = new String[3];
-    //how to grab context from MainActivity and use it in other non activity classes (?)
-
-
-   //public MainActivity(Context context) {
-        // Required empty public constructor in order to access methods in the MainActivity Class
-       //Context context = this;
-    //}
-
-    //Context context;
-    //context = this.getBaseContext();
-
-   // public Context grabContext() {
-    //context = this.getBaseContext();
-    //return context;
-    //}
-
+    String[] Row = new String[6];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +26,13 @@ public class MainActivity extends ListActivity {
         final ListView lstView = getListView();
         lstView.setTextFilterEnabled(true);
         outsidestuff = getResources().getStringArray(R.array.outsidestuff_array);
-        String[] Options = new String[outsidestuff.length];
         for (int i = 0; i < outsidestuff.length; i++) {
-            Options = outsidestuff[i].split(",");
+            String Options[] = outsidestuff[i].split(",");
             Row[i] = Options[0];
         }
+
+        //this is how you build the list and only display the top level item once
+
         //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
         String[] DisplayRow = new HashSet<String>(Arrays.asList(Row)).toArray(new String[0]);
         //display only unique items
@@ -63,11 +49,5 @@ public class MainActivity extends ListActivity {
             }
         });
     }
-
-    public void onListItemClick(ListView parent, View v, int position, long id){
-        Toast.makeText(this, "You have selected " + outsidestuff[position], Toast.LENGTH_SHORT).show();
-    }
-
-
 
 }

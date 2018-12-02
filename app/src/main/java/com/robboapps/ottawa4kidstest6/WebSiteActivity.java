@@ -19,7 +19,6 @@ public class WebSiteActivity extends AppCompatActivity {
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
-            //Row[i] = Options[0];
             if (Options[2].equals(getIntent().getStringExtra("str1"))) {
                 Url = Options[3];
             }

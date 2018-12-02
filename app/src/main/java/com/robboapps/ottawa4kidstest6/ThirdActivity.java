@@ -10,11 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 public class ThirdActivity extends ListActivity {
 
     String[] outsidestuffchoice;
     String[] Options = new String[7];
-    String[] Row = new String[3];
+    String[] Row;
+    Integer Count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +30,25 @@ public class ThirdActivity extends ListActivity {
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
-            //Row[i] = Options[0];
             if (Options[1].equals(getIntent().getStringExtra("str1"))) {
-                Row[i] = Options[2];
+               Count = Count + 1;
             }
         }
 
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Row));
+        Row = new String[Count];
+         Count = 0;
 
+        for (int a = 0; a < outsidestuffchoice.length; a++) {
+            Options = outsidestuffchoice[a].split(",");
+            if (Options[1].equals(getIntent().getStringExtra("str1"))) {
+                Row[Count] = Options[2];
+                Count = Count + 1;
+            }
+        }
+
+        String[] DisplayRow = new HashSet<String>(Arrays.asList(Row)).toArray(new String[0]);
+
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow));
 
         lstView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -45,10 +60,6 @@ public class ThirdActivity extends ListActivity {
                 startActivity(i);
             }
         });
-    }
-
-    public void onListItemClick(ListView parent, View v, int position, long id){
-        Toast.makeText(this, "You have selected " + outsidestuffchoice[position], Toast.LENGTH_SHORT).show();
     }
 
 }
