@@ -10,12 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.robboapps.ottawa4kidstest6.WhereActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Is it working"
-        android:id="@+id/walkingDistance"/>
-
     <fragment
         android:id="@+id/map"
         android:layout_weight="1"
@@ -23,13 +17,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.robboapps.ottawa4kidstest6.WhereActivity" />
-
-    <fragment
-        android:name="com.robboapps.ottawa4kidstest6.ButtonToDirections"
-        android:id="@+id/buttonfragment"
-        android:layout_weight="1"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent" />
-
 
 </LinearLayout>
