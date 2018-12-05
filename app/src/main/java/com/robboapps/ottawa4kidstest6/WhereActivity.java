@@ -9,9 +9,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
+import java.util.Locale;
+
 public class WhereActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    GoogleMap mMap;
+    //GoogleMap mMap;
     String[] outsidestuffchoice;
     String[] Options = new String[7];
     String[] LatLongStringParsed = new String[2];
@@ -56,12 +58,12 @@ public class WhereActivity extends FragmentActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady (GoogleMap googleMap){
 
-        mMap = googleMap;
+        //mMap = googleMap;
         //LatLng Loc = new LatLng (LatNum, LongNum);
         //mMap.addMarker(new MarkerOptions().position(Loc).title(Choice));
         //mMap.addMarker(new MarkerOptions().title(Choice));
         //String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?daddr=%f,%f (%s)", LatNum, LongNum, Choice);
-        String uri = String.format("geo:%f,%f?q= %s", LatNum, LongNum, Choice);
+        String uri = String.format("geo:%f,%f?q=%s", LatNum, LongNum, Choice);
         //mMap.addMarker(new MarkerOptions().title(Choice));
         Uri gmmIntentUri = Uri.parse(uri);
         //Uri gmmIntentUri = Uri.parse(LatNum, LongNum + Uri.encode("1st & Pike, Seattle"));
