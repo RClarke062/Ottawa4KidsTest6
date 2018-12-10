@@ -91,22 +91,6 @@ public class WhereActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please install Google Maps if you'd like to find" +
                         "the location", Toast.LENGTH_LONG).show();
             }
-        }      try
-        {
-            startActivity(mapIntent);
-        }
-        catch(ActivityNotFoundException ex)
-        {
-            try
-            {
-                Intent unrestrictedIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(unrestrictedIntent);
-            }
-            catch(ActivityNotFoundException innerEx)
-            {
-                Toast.makeText(this, "Please install Google Maps application if " +
-                        "you'd like to find the direction", Toast.LENGTH_LONG).show();
-            }
         }
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         //SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
