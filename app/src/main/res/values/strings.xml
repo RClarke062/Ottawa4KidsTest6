@@ -2,9 +2,9 @@
     <string name="app_name">Ottawa4KidsTest6</string>
 
     <string-array name="outsidestuff_array">
-        <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.447292|-75.736883,list of other addresses,set of pictures</item>
-        <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.405411|-75.624797,list of other addresses,set of pictures</item>
-        <item>Indoor Action,Climbing Walls,Vertical Reality,http://www.verticalreal.com/home/index_e.php,45.419446|-75.715649,list of other addresses,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.447292|-75.736883,Downtown,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.405411|-75.624797,St Laurent,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Vertical Reality,http://www.verticalreal.com/home/index_e.php,45.419446|-75.715649,Hull,set of pictures</item>
         <item>Outdoor Action,Cool Parks,Downtown Lake,blart,45.396244|-75.707633,list of other addresses,set of pictures</item>
         <item>Outdoor Action,Cool Parks,Remic Rapids,blart,45.409789|-75.7744053,list of other addresses,set of pictures</item>
         <item>Outdoor Action,Hiking,Gatineau Trails,blart,45.409789|-75.7744053,list of other addresses,set of pictures</item>
@@ -15,6 +15,12 @@
         <item>Where is It</item>
         <item>Side Trips for Adults</item>
         <item>Whats Cool</item>
+    </string-array>
+
+    <string-array name="sidetrips_array">
+        <item>Hull, Les Galleries de Hull Mall|45.4414116|-75.7319253, Casino du Lac Leamy|45.4463301|-75.7271315</item>
+        <item>St Laurent, St. Laurent Mall|45.4216557|-75.6411056, Simply Wood|45.4042391|-75.6259771</item>
+        <item>Downtown, Rideau Locks|45.4249644|-75.697956, Parliament Buildings|45.4235974|-75.7031177, National Archives|45.420053|-75.7100846</item>
     </string-array>
 
     <string name="title_activity_where">Map</string>
