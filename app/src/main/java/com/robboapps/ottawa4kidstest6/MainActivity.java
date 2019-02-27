@@ -16,7 +16,7 @@ import java.util.HashSet;
 public class MainActivity extends ListActivity {
 
     String[] outsidestuff;
-    String[] Row = new String[6];
+    String[] Row;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +26,13 @@ public class MainActivity extends ListActivity {
         final ListView lstView = getListView();
         lstView.setTextFilterEnabled(true);
         outsidestuff = getResources().getStringArray(R.array.outsidestuff_array);
+        Row = new String[outsidestuff.length];
         for (int i = 0; i < outsidestuff.length; i++) {
             String Options[] = outsidestuff[i].split(",");
             Row[i] = Options[0];
         }
 
         //this is how you build the list and only display the top level item once
-
         //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
         String[] DisplayRow = new HashSet<String>(Arrays.asList(Row)).toArray(new String[0]);
         //display only unique items

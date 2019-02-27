@@ -17,7 +17,8 @@ import java.util.HashSet;
 public class SecondActivity extends ListActivity {
 
     String[] outsidestuffchoice;
-    String[] Options = new String[7];
+    //String[] Options = new String[6];
+    String[] Options;
     String[] Row;
     Integer Count = 0;
 

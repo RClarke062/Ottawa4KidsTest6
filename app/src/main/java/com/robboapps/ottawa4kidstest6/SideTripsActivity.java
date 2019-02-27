@@ -34,7 +34,7 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
     String[] outsidestuffchoice;
     String[] SideTripsRegions;
     String[] SideTripsMarker = new String[3];
-    String[] Options = new String[7];
+    String[] Options = new String[6];
     String[] LatLongStringParsed = new String[2];
     String Choice;
     String SideTripsKey;
@@ -62,6 +62,8 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
             if (Options[2].equals(Choice)) {
                 LatLongString = Options[4];
                 SideTripsKey = Options[5];
+                System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                System.out.println("XANADU in Outsidestuffchoice" + Choice);
             }
         }
 
@@ -168,6 +170,7 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
         SideTripsRegions = getResources().getStringArray(R.array.sidetrips_array);
         for (int i = 0; i < SideTripsRegions.length; i++) {
             String[] SideTripsLocations = SideTripsRegions[i].split(",");
+            System.out.println("XANADU in onMapReady" + SideTripsKey);
             if (SideTripsLocations[0].equals(SideTripsKey)) {
                 for (int x = 1; x < SideTripsLocations.length; x++) {
                     SideTripsMarker = SideTripsLocations[x].split("\\|");

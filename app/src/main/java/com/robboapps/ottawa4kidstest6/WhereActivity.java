@@ -23,7 +23,7 @@ import java.util.Locale;
 public class WhereActivity extends AppCompatActivity {
     GoogleMap mMap;
     String[] outsidestuffchoice;
-    String[] Options = new String[7];
+    String[] Options = new String[6];
     String[] LatLongStringParsed = new String[2];
     String Choice;
     String LatLongString;

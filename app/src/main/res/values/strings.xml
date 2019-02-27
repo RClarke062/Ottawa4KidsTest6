@@ -2,25 +2,225 @@
     <string name="app_name">Ottawa4KidsTest6</string>
 
     <string-array name="outsidestuff_array">
-        <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.447292|-75.736883,Downtown,set of pictures</item>
-        <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.405411|-75.624797,St Laurent,set of pictures</item>
-        <item>Indoor Action,Climbing Walls,Vertical Reality,http://www.verticalreal.com/home/index_e.php,45.419446|-75.715649,Hull,set of pictures</item>
-        <item>Outdoor Action,Cool Parks,Downtown Lake,blart,45.396244|-75.707633,list of other addresses,set of pictures</item>
-        <item>Outdoor Action,Cool Parks,Remic Rapids,blart,45.409789|-75.7744053,list of other addresses,set of pictures</item>
-        <item>Outdoor Action,Hiking,Gatineau Trails,blart,45.409789|-75.7744053,list of other addresses,set of pictures</item>
+        <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.4468803|-75.7390535,Hull1,all</item>
+        <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.4052373|-75.6273293,StLaurent,all</item>
+        <item>Indoor Action,Crafts and Stuff,Mud Oven,https://www.mudoven.com/,45.394832|-75.6857837,OOS,all</item>
+        <item>Indoor Action,Crafts and Stuff,Wabi Sabi,https://wabi-sabi.ca/,45.403326|-75.7270905,Westborough,all</item>
+        <item>Indoor Action,Fun Parks,Cosmic Adventures,http://www.cosmicadventures.ca/,45.4308464|-75.6237935,Orleans,threeA</item>
+        <item>Indoor Action,Fun Parks,Fun Haven,http://www.funhaven.com/,45.3538729|-75.7826372,Bayshore, threeA</item>
+        <item>Indoor Action,Fun Parks,Adventure Land,https://www.adventurelandottawa.ca/,45.3760353|-75.6716126,SouthKeys,threeA</item>
+        <item>Indoor Action,Fun Parks,Ikea Ball Room,https://www.ikea.com/ms/en_CA/locator/ottawa.html,45.3503524|-75.7859709,Bayshore,threeB </item>
+        <item>Indoor Action,Indoor Go-Karting,Top Karting,http://www.topkarting.com/,45.4581953|-75.7393156,Hull1,threeA</item>
+        <item>Indoor Action,Laser Tag,Fun Haven,http://www.funhaven.com/,45.3538729|-75.7826372,Bayshore,threeA</item>
+        <item>Indoor Action,Laser Tag,Laser Quest,https://www.laserquest.com/on-ottawa/,45.4040912|-75.6289438,StLaurent,threeA</item>
+        <item>Indoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
+        <item>Indoor Action,Indoor MiniGolf,Putting Edge,http://www.puttingedge.com/,45.338863|-75.7269307,Nepean,threeA</item>
+        <item>Indoor Action,Movies,Downtown Rep Theatre,https://www.bytowne.ca/,45.4295816|-75.6869569,OttawaU,all</item>
+        <item>Indoor Action,Movies,Neighbourhood Rep Theatre,http://mayfairtheatre.ca/,45.3946242|-75.685931,OOS,all</item>
+        <item>Indoor Action,Public Pools,Public Pool Locations,https://ottawa.ca/en/residents/recreation-and-parks/swimming,blart|blart,blart,one</item>
+        <item>Indoor Action,Public Pools,Kanata Wave Pool,https://ottawa.ca/en/residents/facilities/kanata-leisure-centre-and-wave-pool,
+            45.3111262|-75.9013908,Kanata,one</item>
+        <item>Indoor Action,Public Pools,Splash Wave Pool,https://ottawa.ca/en/residents/facilities/splash-wave-pool,
+            45.4374975|-75.6025427,Orleans,one</item>
+        <item>Indoor Action,Secret Spots,Glass Elevator @ Ottawa U,blart,45.419100|-75.678165,OttawaU,threeB</item>
+        <item>Indoor Action,Secret Spots,Secret Tunnels,blart,45.386063|-75.693745,OOS,threeB</item>
+        <item>Indoor Action,Secret Spots,Butterfly Sanctuary,https://science.carleton.ca/outreach/butterfly-show,45.383711|-75.693625,OOS,threeA</item>
+        <item>Indoor Action,Trampoline Parks,Skyzone,https://www.skyzone.com/ca-ottawa,45.382464|-75.6301577,OOS,all</item>
+        <item>Indoor Action,Trampoline Parks,Xtreme Trampoline,https://www.xtpark.com/,45.298999|-75.9191087,Kanata,all</item>
+        <item>Outdoor Action,Downhill Board and Ski,List of Local Resorts, https://www.ottawatourism.ca/ottawa-insider/skiing-in-the-ottawa-gatineau-region/,
+            blart|blart,blart,one</item>
+        <item>Outdoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
+        <item>Outdoor Action,Skating,Public Skating Schedule,https://ottawa.ca/en/residents/recreation-and-parks/skating,blart|blart,blart,one</item>
+        <item>Outdoor Action,Skating,Skating on the Canal,https://www.ottawatourism.ca/events/rideau-canal-skateway/,45.423892|-75.6928913,Downtown,one</item>
+        <item>Outdoor Action,Tobogganing,All Hills,https://ottawa.ca/en/residents/recreation-and-parks/sports-fields-and-outdoor-recreation#sledding-hills,
+            blart|blart,blart,one</item>
+        <item>Outdoor Action,X-Country Ski,Gatineau Park,http://ncc-ccn.gc.ca/places/cross-country-skiing,blart|blart,Chelsea,one</item>
+        <item>Outdoor Action,X-Country Ski,Greenbelt,http://skitrails.xcottawa.ca/skitrails_green_belt.php,blart|blart,blart,one</item>
+        <item>Outdoor Action,X-Country Ski,All X-Country,http://xcskiing.ca/,blart|blart,blart,one</item>
+        <item>Outdoor Action,Premium Picnic Spots,By the Inukshuks,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
+            45.4107358|-75.7464677,Westborough,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Ottawa River Parkway,blart,45.379148|-75.779837,Westborough,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Parliament Panorama,blart,45.428183|-75.699162,Parliament,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Rockcliffe Refuge,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Up Ottawa River,blart,45.379805|-75.802254,Aylmer,threeA</item>
+        <item>Outdoor Action,Premium Picnic Spots,Vincent Massey Park,blart,45.3783501|-75.7010951,OOS,threeA</item>
+        <item>Outdoor Action,Cool Parks,Bottom of Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
+        <item>Outdoor Action,Cool Parks,Boat-Floating Pond,blart,45.404337|-75.6823132,Glebe,threeA</item>
+        <item>Outdoor Action,Cool Parks,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
+        <item>Outdoor Action,Cool Parks,NearDownTownShopping Park,blart,45.4272947|-75.699222,Parliament,threeA</item>
+        <item>Outdoor Action,Cool Parks,RunAround Park,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
+        <item>Outdoor Action,Cool Parks,Paper Airplane Hill,blart,45.390743|-75.7053765,DowsLake,threeA</item>
+        <item>Outdoor Action,Cool Parks,Rock Sculptures Park,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
+            45.4107358|-75.7464677,Westborough,threeA</item>
+        <item>Outdoor Action,Outdoor Go-Karting,Karters Korner,http://karterskorner.com/,45.2254362|-75.8949015,Stittsville,threeA</item>
+        <item>Outdoor Action,Outdoor Go-Karting,Amigo Karting,http://amigokarting.com/,45.505264|-75.5471097,Hull1,threeA</item>
+        <item>Outdoor Action,Beaches,Brittania,blart,45.3656839|-75.8032139,Brittania,threeA</item>
+        <item>Outdoor Action,Beaches,Lac Phillipe,blart,45.6129792|-76.0122826,Chelsea,threeA</item>
+        <item>Outdoor Action,Beaches,Meech Lake,blart,45.5286959|-75.8722773,Chelsea,threeA</item>
+        <item>Outdoor Action,Beaches,Mooney\'s Bay,blart,45.3671918|-75.6937111,Hogsback,all</item>
+        <item>Outdoor Action,Beaches,The Secret Beach,blart,45.407572|-75.746636,Westborough,,threeA</item>
+        <item>Outdoor Action,Beaches,Westborough,blart,45.3974026|-75.7581246,Westborough,threeA</item>
+        <item>Outdoor Action,Bicycling,Mountain Biking,https://www.ottawatourism.ca/ottawa-insider/mountain-biking-in-ottawa/,blart|blart,blart,one</item>
+        <item>Outdoor Action,Bicycling,Ottawa Bike Paths,
+            https://ottawa.ca/en/residents/transportation-and-parking/cycling/routes-and-maps#official-cycling-map-ottawa-gatineau,blart|blart,blart,one</item>
+        <item>Outdoor Action,Bicycling,RentaBike,http://www.rentabike.ca/,45.424698|-75.6964926,Parliament,threeA</item>
+        <item>Outdoor Action,Bicycling,Ottawa Cycling Tours,http://www.ottawacyclingtours.com/,blart|blart,blart,one</item>
+        <item>Outdoor Action,Bicycling,Velogo,https://gohopr.com/velogo/,blart|blart,blart,one</item>
+        <item>Outdoor Action,Boat Rides,Capital Cruises,http://www.capitalcruises.ca/,45.4305935|-75.7080422,Parliament,all</item>
+        <item>Outdoor Action,Boat Rides,Pirate Adventures,https://www.pirateadventuresottawa.com/,45.3701264|-75.6979439,Hogsback,all</item>
+        <item>Outdoor Action,Boat Rides,Lady Dive Tours,https://ladydive.com/,45.423822|-75.6986396,Parliament,all</item>
+        <item>Outdoor Action,Boat Rides,Paddle Boat Rental,http://www.dowslake.com/summer_rentals.php,45.3963487|-75.7078906,DowsLake,threeA</item>
+        <item>Outdoor Action,Boat Rides,Paul\'s Boat Lines,https://paulsboatline.com/en/,45.4321769|-75.7097061,Hull,all</item>
+        <item>Outdoor Action,Boat Rides,Rideau Canal Cruises,http://rideaucanalcruises.ca/en/,45.4230839|-75.6956547,Parliament,threeA</item>
+        <item>Outdoor Action,Water Parks,Cascades,https://montcascades.ca/aqua/,45.5857388|-75.8476,Hull2,threeA</item>
+        <item>Outdoor Action,Water Parks,Calypso,https://www.calypsopark.com/en/,45.3149921|-75.2204962,Hull2</item>
+        <item>Outdoor Action,Plane Rides,Biplane Ride,https://ingeniumcanada.org/rides-and-simulations/vintage-biplane-rides,45.458542|-75.6462657,Edinburgh,threeA</item>
+        <item>Outdoor Action,Plane Rides,Helicopter,https://ingeniumcanada.org/rides-and-simulations/helicopter-rides,45.4567103|-75.6517694,Edinburgh,threeA</item>
+        <item>Outdoor Action,Plane Rides,Sightseeing Plane,https://www.rfc.ca/en/sightseeing/,45.4621339|-75.6479119,Edinburgh,threeA</item>
+        <item>Outdoor Action,Hiking,Gatineau Trails,http://ncc-ccn.gc.ca/places/hiking-and-walking-gatineau-park,blart|blart,Chelsea,one</item>
+        <item>Outdoor Action,Hiking,Gatineau Tours and Events,http://ncc-ccn.gc.ca/events,blart|blart,blart,one</item>
+        <item>Outdoor Action,Hiking,Ottawa Green Belt,http://ncc-ccn.gc.ca/places/hiking-and-walking-greenbelt,blart|blart,blart,one</item>
+        <item>Outdoor Action,Outdoor MiniGolf,Mini Golf Gardens,https://minigolfgardens.com/,45.3400004|-75.7279115,Merrivale,threeA</item>
+        <item>Outdoor Action,Outdoor MiniGolf,Dunn Dee\'s Mini Golf,https://www.dunnderosa.ca/dunnds-home,45.498505|-75.8161487,Chelsea,all</item>
+        <item>Outdoor Action,Secret Spots,Adventure Paths,http://ofnc.ca/programs/fletcher-wildlife-garden,45.3870864|-75.7053924,DowsLake,threeB</item>
+        <item>Outdoor Action,Secret Spots,Graffiti Wall,http://houseofpaint.ca/,45.3842396|-75.6911924,OOS,all</item>
+        <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664,-75.7027112,Parliament,threeB</item>
+        <item>Outdoor Action,Secret Spots,Hogsback Waterfall,http://ncc-ccn.gc.ca/places/hogs-back-park,45.3719725|-75.7080416,Hogsback,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Governor General\'s Residence,https://www.gg.ca/en/visit-us/,45.4445002|-75.6879901,Edinburgh,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Laurier\'s House,https://www.pc.gc.ca/en/lhn-nhs/on/laurier/,45.4277331|-75.6801956,OttawaU,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Mackenzie King Estate,http://ncc-ccn.gc.ca/places/mackenzie-king-estate,45.4834557|-75.8501579,Chelsea,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Parliament Buildings,https://www.ottawatourism.ca/ottawa-insider/parliament-hill/,45.4251258|-75.7021195,Downtown,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Prime Minister\'s Residence,https://www.pc.gc.ca/apps/dfhd/page_fhbro_eng.aspx?id=2711,
+            45.444368|-75.6960238,Edinburgh,all</item>
+        <item>Educate Me!,Canadian Hot Spots,RCMP Musical Ride,http://www.rcmp-grc.gc.ca/en/ride-centre,45.4571114|-75.6557862,Edinburgh,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Rideau Canal,https://www.ottawatourism.ca/travel-trade/itineraries/rideau-canal/,
+            45.426102|-75.6987975,Parliament,all</item>
+        <item>Educate Me!,Canadian Hot Spots,Supreme Court of Canada,https://www.scc-csc.ca/home-accueil/index-eng.aspx,45.4219636|-75.7077625,Downtown,all</item>
+        <item>Educate Me!,Kid\'s Theatre,National Arts Centre,https://nac-cna.ca/en/discover/children,45.4230839|-75.6956547,Downtown,all</item>
+        <item>Educate Me!,Kid\'s Theatre,Ottawa Children\'s Theatre,https://www.ottawachildrenstheatre.net/,45.4168838|-75.6980018,Glebe,threeA</item>
+        <item>Educate Me!,Libraries,List of Libraries,https://biblioottawalibrary.ca/en/library,blart|blart,blart,one</item>
+        <item>Educate Me!,Museums,Airplane Museum,https://ingeniumcanada.org/aviation/index.php,45.458542|-75.6462657,Edinburgh,all</item>
+        <item>Educate Me!,Museums,Children\'s Museum,https://www.historymuseum.ca/visit/childrens-museum/,45.429298|-75.7115287,Hull2,all</item>
+        <item>Educate Me!,Museums,Dinosaur Museum,https://nature.ca/en/home,45.4214332|-75.7076101,Elgin St,all</item>
+        <item>Educate Me!,Museums,Farm Museum,https://ingeniumcanada.org/agriculture/index.php,45.3875416|-75.7115085,DowsLake,all</item>
+        <item>Educate Me!,Museums,Train Museum,https://ingeniumcanada.org/cstm,45.4044626|-75.6235706,StLaurent,all</item>
+        <item>Educate Me!,Museums,War Museum,https://www.warmuseum.ca/,45.4171032|-75.7191305,Parliament,all</item>
+        <item>Educate Me!,Museums,List of All Museums,https://www.ottawatourism.ca/see-and-do/museums/,blart|blart,blart,one</item>
+        <item>Educate Me!,Walking Tours,History Tours,https://www.ottawawalkingtours.com/,45.447292|-75.736883,Downtown,threeA</item>
+        <item>Educate Me!,Walking Tours,Haunted Walks,https://hauntedwalk.com/ottawa-tours/,45.423451|-75.6981247,Downtown,all</item>
+        <item>Shop till you Drop,Bookstores,Black Squirrel Books, https://www.blacksquirrelbooks.ca/,45.3946641|-75.6856839,OOS,all</item>
+        <item>Shop till you Drop,Bookstores,Booksonbeechwood,https://store.booksonbeechwood.ca/,45.4398201|-75.6792246,Edinburgh,threeA</item>
+        <item>Shop till you Drop,Bookstores,Chapters,https://www.chapters.indigo.ca/en-ca/home/storelocator/storeDetails/767/,
+            45.425842|-75.695244,Downtown,all</item>
+        <item>Shop till you Drop,Bookstores,Perfect Books, http://perfectbooks.ca/wp/,45.4180427|-75.6928445,Elgin St,threeA</item>
+        <item>Shop till you Drop,Malls and Local Shops,Malls and Districts List,
+            https://ottawastart.com/ottawa-shopping-guide-a-list-of-malls-shopping-centres-and-local-services/,blart|blart,blart,one</item>
+        <item>Shop till you Drop,Toy Shops,Mastermind Toys, https://www.mastermindtoys.com/,45.3080058|-75.9141275,Kanata,all</item>
+        <item>Shop till you Drop,Toy Shops,Mrs. Tiggy Winkles,https://mrstiggywinkles.ca/,45.4026565|-75.6902014,Glebe,all</item>
+        <item>Shop till you Drop,Toy Shops,Tag Along Toys, http://www.tagalongtoys.ca/,45.310768|-75.9228837,Kanata,all</item>
+        <item>Time to Eat!,Sweet Treats,Beaver Tails, http://beavertails.com/,45.4274237|-75.6938669,Downtown,all</item>
+        <item>Time to Eat!,Sweet Treats,Cupcake Lounge, https://thecupcakelounge.com/,45.428559|-75.6958792,Downtown,all</item>
+        <item>Time to Eat!,Sweet Treats,ThimbleCakes, http://thimblecakes.ca/,45.4145798|-75.6956539,Elgin St,all</item>
+        <item>Time to Eat!,Sweet Treats,SuzyQ Doughnuts, http://suzyq.ca/,45.4061922|-75.7247511,Westborough,all</item>
+        <item>Time to Eat!,Ice Cream,Lois N Frimas, http://www.loisnfrimasicecream.com/,45.4274362|-75.6938186,Downtown,all</item>
+        <item>Time to Eat!,Ice Cream,Marble Slab,http://www.marbleslab.ca/,45.4036607|-75.6907147,Glebe,all</item>
+        <item>Time to Eat!,Ice Cream,Menchies, http://www.menchies.ca/index.php,45.4272373|-75.6934143,Downtown,all</item>
+        <item>Time to Eat!,Ice Cream,Piccolo Grande, https://www.facebook.com/pggelato/,45.420194|-75.7028378,Downtown,all</item>
+        <item>Time to Eat!,Ice Cream,Pure Gelato, https://www.facebook.com/PureGelatoElgin/,45.4155291|-75.6906868,Elgin St,all</item>
+        <item>Time to Eat!,Ice Cream,Stella Luna, https://www.slgelato.com/,45.3939268|-75.6852812,OOS,all</item>
+        <item>Time to Eat!,Family Restaurants,Colonnade Pizza, http://www.colonnadepizza.com/,45.4157708|-75.6938092,Elgin St,all</item>
+        <item>Time to Eat!,Family Restaurants,Cora\'s,https://www.chezcora.com/en/breakfast-restaurants/ontario/Cora-Rideau-Ottawa,
+            45.427471|-75.6915597,OttawaU</item>
+        <item>Time to Eat!,Family Restaurants,Elgin Street Diner, https://www.elginstreetdiner.com/,45.4149037|-75.6902546,Elgin St,all</item>
+        <item>Time to Eat!,Family Restaurants,Hintonburger,https://www.facebook.com/hintonburger,45.4064212|-75.7224561,Westborough,all</item>
+        <item>Time to Eat!,Family Restaurants,Lone Star, https://lonestartexasgrill.com/,45.4277724|-75.6920279,Downtown,all</item>
+        <item>Time to Eat!,Family Restaurants,Kettleman\'s Bagel Co.,https://www.kettlemansbagels.ca/,45.399884|-75.6891747,Glebe,all</item>
+        <item>Time to Eat!,Family Restaurants,Zaks Diner,https://www.zaksdiner.com/eat-at-zaks/,45.4283777|-75.6957837,Downtown,all</item>
+        <item>Time to Eat!,Outdoor Markets,Downtown Market,https://byward-market.com/en/home/,45.428907|-75.6955648,Downtown,all</item>
+        <item>Time to Eat!,Outdoor Markets,Ottawa Farmer\'s Market,https://ottawafarmersmarket.ca/,45.3998954|-75.6854072,OOS,all</item>
+        <item>Time to Eat!,Outdoor Markets,Parkdale Market,http://ottawamarkets.com/,45.4011853|-75.7317195,Westborough,all</item>
+        <item>Time to Eat!,Outdoor Markets,Main St. Market,http://mainfarmersmarket.org/,45.4080814|-75.6796549,Main Street,all</item>
+
     </string-array>
 
-    <string-array name="details_array">
+    <string-array name="allitems_array">
         <item>WebSite</item>
         <item>Where is It</item>
         <item>Side Trips for Adults</item>
         <item>Whats Cool</item>
     </string-array>
 
+    <string-array name="threeitemsA_array">
+        <item>WebSite</item>
+        <item>Where is It</item>
+        <item>Side Trips for Adults</item>
+    </string-array>
+
+    <string-array name="threeitemsB_array">
+        <item>Where is It</item>
+        <item>Side Trips for Adults</item>
+        <item>Whats Cool</item>
+    </string-array>
+
+    <string-array name="oneitem_array">
+        <item>WebSite</item>
+    </string-array>
+
     <string-array name="sidetrips_array">
-        <item>Hull, Les Galleries de Hull Mall|45.4414116|-75.7319253, Casino du Lac Leamy|45.4463301|-75.7271315</item>
-        <item>St Laurent, St. Laurent Mall|45.4216557|-75.6411056, Simply Wood|45.4042391|-75.6259771</item>
-        <item>Downtown, Rideau Locks|45.4249644|-75.697956, Parliament Buildings|45.4235974|-75.7031177, National Archives|45.420053|-75.7100846</item>
+        <item>Bayshore,Golf o Max Indoor Driving Range|45.353581|-75.779184,Starbucks|45.349363|-75.788046,Ikea|45.350769|-75.784195</item>
+        <item>St Laurent,St. Laurent Mall|45.4216557|-75.6411056,Simply Wood|45.4042391|-75.6259771</item>
+        <item>Downtown,Rocky Mountain Chocolate Factory |45.427301|-75.692189,Le Moulin de Provence Cafe |45.428103|-75.692732,
+            Funk your Junk Retro Clothes|45.429782|-75.694379,Ma Cuisine Kitchen Shop|45.430384|-75.692257,Planet Coffee|45.427087|-75.693603,
+            Ottawa Senators Sports Bar|45.428527|-75.694510,Rideau Mall|45.425491|-75.692181, Apple Store|45.425449|-75.692693,
+            National Art Gallery|45.429546|-75.698444,Shops on Dalhousie|45.430799|-75.692747,La Bottega Italian Shop|45.427036|-75.691897,
+            Roots|45.427771|-75.692032,Shops and Galleries on Sussex|45.426983|-75.694579</item>
+        <item>Elgin St,Mags and Fags Magazines|45.418221|-75.690766,Capital Information Kiosk|45.423307|-75.698054,
+            Sparks St. Pedestrian Mall|45.423139|-75.696799,The Manx Pub|45.415110|-75.688060,Bridgehead Coffee|45.417052|-75.689791,
+            Pressed Cafe|45.407149|-75.705117</item>
+        <item>Glebe,Aberdeen Pavilion|45.399966|-75.683033, Landsdown Park|45.399488|-75.684277,Home Hardware|45.403691|-75.689087,
+            Octopus Books|45.402921|-75.688484,Bridgehead Coffee|45.403620|-75.688827</item>
+        <item>Hull1,Les Galleries de Hull Mall|45.441158|-75.730939, Casino du Lac Leamy|45.446049|-75.725487</item>
+        <item>Hull2,Canadian Museum of History 45.428938|-75.708605,Champlain Lookout|45.429559|-75.701668,Bike Path to Aylmer Start|45.428149|-75.706571</item>
+        <item>Main Street,The Emporium Furniture|45.413772|-75.680636,Green Door Vegetarian Restaurant|45.408204|-75.677605</item>
+        <item>Nepean,Nepean Crossroads Centre Mall|45.334908|-75.725327,Rona Home and Garden Centre|45.335157|-75.730046,
+            Canadian Tire Hardware Store|45.336383|-75.726629</item>
+        <item>Kanata, Best Buy|45.311192|-75.909777,Sport Chek|45.310586|-75.908983,Starbucks|45.311391|-75.914587, Kanata Centrum Mall|45.311043|-75.910635</item>
+        <item>Edinburgh,Second Cup Coffee|45.440115|-75.676144,The Scone Witch 45.439569|-75.676928,Bridgehead Coffee|45.442017|-75.671928,
+            Park by the River|45.438684|-75.685033,International Embassies|45.454426|-75.681869</item>
+        <item>Chelsea,Biscotti Café|45.503578|-75.811273,La Cigale Ice Cream|45.503984|-75.811261,Chelsea Bakery|45.503113|-75.810480,
+            Gatineau Park Tourist Centre|45.505266|-75.811960, Les Saisons Coffee Shop|45.503240|-75.809857</item>
+        <item>Orleans, Gloucester Centre Mall|45.432306|-75.610953, Starbucks|45.431960|-75.617735</item>
+        <item>Parliament,Chateau Laurier|45.425199|-75.694845,Parliament Buildings|45.424995|-75.699823,Darcy McGee\'s Pub|45.423457|-75.695766,
+            Snow Goose Canadian Crafts|45.423109|-75.697108,Bridgehead Coffee|45.422635|-75.697372,National Archives|45.419642|-75.707838,
+            War Memorial|45.424014|-75.695432, Wilfrid\'s Afternoon Tea|45.425284|-75.694479,Oscar Peterson Statue|45.422647|-75.694045,
+            Rideau Locks|45.426681|-75.698675</item>
+        <item>SouthKeys,Canadian Tire Hardware Store|45.377237|-75.668423,Rockland Fabric Shop|45.375074|-75.670365,
+            South Keys Shopping Centre|45.357070|-75.654036</item>
+        <item> Stittsville,Stittsville Flea Market|45.275376|-75.950355</item>
+        <item>StLaurent,Kiddytown Baby Store|45.404384|-75.623941,St. Laurent Mall|45.421940|-75.639117</item>
+        <item>Westborough,Bushtuka Sports Equipment|45.394612|-75.748407,Mountain Equipment Outdoor Sports Store|45.391260|-75.755209,
+            Bridgehead Coffee Shop|45.389712|-75.758245</item>
+        <item>Brittania,Bike Path to Downtown|45.362648|-75.801959,Tim Horton\'s Coffee|45.355761|-75.802892,
+            Bayshore Shopping Centre|45.347090|-75.806191</item>
+        <item>DowsLake,Bridgehead Coffee and Roastery|45.407205|-75.713175,Preston Italian Hardware|45.404849|-75.712456,
+            Biscotti Italian Coffee|45.401813|-75.710341,Little Italy|45.399447|-75.708919</item>
+        <item>Hogsback,Hog\'s Back Snack Bar|45.371519|-75.696079,Tim Horton\'s Coffee|45.369282|-75.702640</item>
+        <item>Merrivale,Best Buy|45.345539|-75.728671,Home Sense|45.345438|-75.728590</item>
+        <item>Rockcliffe,Second Cup Coffee|45.440115|-75.676144,The Scone Witch|45.439569|-75.676928,
+            Bridgehead Coffee|45.442017|-75.671928,International Embassies|45.454426|-75.681869</item>
+        <item>Aylmer,Cafe Mulligan|45.395276|-75.841149,Cafe British|45.394872|-75.846932</item>
+        <item>OttawaRivParkwy,Carlingwood Shopping Centre|45.373179|-75.768947,Kettleman\'s Bagel Co.|45.370387|-75.771222,
+            Starbucks|45.368976|-75.772169</item>
+        <item>OOS,Alteriors Furniture|45.392768|-75.682582,Trillium Bakery|45.392127|-75.681788,Greyhorne Interiors|45.393282|-75.682825,
+            Life of Pie Bakeshop|45.394016|-75.683202</item>
+        <item>OttawaU,Royal Oak Pub|45.425102|-75.683610,Cordon Bleu Cullinary Arts|45.428999|-75.674574,University of Ottawa|45.424811|-75.685414,
+            Ottawa Convention Centre|45.424092|-75.691846,Historic Ottawa Jailhouse|45.424983|-75.688601,Steve\'s Music Store|45.429010|-75.685006</item>
+        <item>Westborough,Bushtuka Sports Equipment|45.394612|-75.748407,Mountain Equipment Outdoor Sports Store|45.391260|-75.755209,
+            Bridgehead Coffee Shop|45.389712|-75.758245</item>
+
+
     </string-array>
 
     <string name="title_activity_where">Map</string>

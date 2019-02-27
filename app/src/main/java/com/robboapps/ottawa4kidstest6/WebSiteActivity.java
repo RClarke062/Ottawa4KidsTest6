@@ -8,18 +8,23 @@ import android.webkit.WebView;
 public class WebSiteActivity extends AppCompatActivity {
 
     String[] outsidestuffchoice;
-    String[] Options = new String[7];
+    String[] Options = new String[6];
     String Url;
+    //final Bundle extras = getIntent().getExtras();
+    //final String VendorChoice = extras.getString("VENDORCHOICE");
+    //final String SelectionOptions = extras.getString("SELECTIONOPTIONS");
+    String VendorChoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_site);
 
+        VendorChoice= getIntent().getStringExtra("str1");
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
-            if (Options[2].equals(getIntent().getStringExtra("str1"))) {
+            if (Options[2].equals(VendorChoice)) {
                 Url = Options[3];
             }
         }
