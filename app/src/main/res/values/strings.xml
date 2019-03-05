@@ -60,7 +60,7 @@
         <item>Outdoor Action,Beaches,Lac Phillipe,blart,45.6129792|-76.0122826,Chelsea,threeA</item>
         <item>Outdoor Action,Beaches,Meech Lake,blart,45.5286959|-75.8722773,Chelsea,threeA</item>
         <item>Outdoor Action,Beaches,Mooney\'s Bay,blart,45.3671918|-75.6937111,Hogsback,all</item>
-        <item>Outdoor Action,Beaches,The Secret Beach,blart,45.407572|-75.746636,Westborough,,threeA</item>
+        <item>Outdoor Action,Beaches,The Secret Beach,blart,45.407572|-75.746636,Westborough,threeA</item>
         <item>Outdoor Action,Beaches,Westborough,blart,45.3974026|-75.7581246,Westborough,threeA</item>
         <item>Outdoor Action,Bicycling,Mountain Biking,https://www.ottawatourism.ca/ottawa-insider/mountain-biking-in-ottawa/,blart|blart,blart,one</item>
         <item>Outdoor Action,Bicycling,Ottawa Bike Paths,
@@ -86,7 +86,7 @@
         <item>Outdoor Action,Outdoor MiniGolf,Dunn Dee\'s Mini Golf,https://www.dunnderosa.ca/dunnds-home,45.498505|-75.8161487,Chelsea,all</item>
         <item>Outdoor Action,Secret Spots,Adventure Paths,http://ofnc.ca/programs/fletcher-wildlife-garden,45.3870864|-75.7053924,DowsLake,threeB</item>
         <item>Outdoor Action,Secret Spots,Graffiti Wall,http://houseofpaint.ca/,45.3842396|-75.6911924,OOS,all</item>
-        <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664,-75.7027112,Parliament,threeB</item>
+        <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664|-75.7027112,Parliament,threeB</item>
         <item>Outdoor Action,Secret Spots,Hogsback Waterfall,http://ncc-ccn.gc.ca/places/hogs-back-park,45.3719725|-75.7080416,Hogsback,all</item>
         <item>Educate Me!,Canadian Hot Spots,Governor General\'s Residence,https://www.gg.ca/en/visit-us/,45.4445002|-75.6879901,Edinburgh,all</item>
         <item>Educate Me!,Canadian Hot Spots,Laurier\'s House,https://www.pc.gc.ca/en/lhn-nhs/on/laurier/,45.4277331|-75.6801956,OttawaU,all</item>

@@ -90,27 +90,27 @@ public class CoolPageFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_cool_page, container, false);
         imageView = view.findViewById(R.id.imageView);
 
-        //how to set image reousrce if file is in the drawable folder
-        //imageView.setImageResource(R.drawable.b);
-
-        if (mPosition == 0){
-            imageView.setImageBitmap(picString.get(0));
-        }else {
-            imageView.setImageBitmap(picString.get(1));
-        }
-
-/* switch as alternative to if else (does not add photos to individual swipe screens so not used)
         switch (mPosition) {
             case 0:
                 imageView.setImageBitmap(picString.get(0));
+                return view;
             case 1:
                 imageView.setImageBitmap(picString.get(1));
+                return view;
+            case 2:
+                imageView.setImageBitmap(picString.get(2));
+                return view;
+            case 3:
+                imageView.setImageBitmap(picString.get(3));
+                return view;
+            case 4:
+                imageView.setImageBitmap(picString.get(4));
+                return view;
             default:
                 imageView.setImageBitmap(picString.get(0));
-                //}
-                //return view;
+                return view;
         }
-        */
-return view;
+
+//return view;
     }
 }

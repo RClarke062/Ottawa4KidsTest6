@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.robboapps.ottawa4kidstest6.SecondActivity">
 
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
+
 </android.support.constraint.ConstraintLayout>

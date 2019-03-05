@@ -62,6 +62,13 @@ public class WhatsCoolActivity extends FragmentActivity {
                     return CoolPageFragment.newInstance(0, WhichActivity);
                 case 1:
                     return CoolPageFragment.newInstance(1, WhichActivity);
+                case 2:
+                    return CoolPageFragment.newInstance(2, WhichActivity);
+                case 3:
+                    return CoolPageFragment.newInstance(3, WhichActivity);
+                case 4:
+                    return CoolPageFragment.newInstance(4, WhichActivity);
+
                     default:
                         return null;
             }

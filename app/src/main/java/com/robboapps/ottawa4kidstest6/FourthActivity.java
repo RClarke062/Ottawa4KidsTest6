@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 
@@ -22,7 +20,7 @@ public class FourthActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fourth);
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         SelectionOptions = extras.getString("SELECTIONOPTIONS");
@@ -31,7 +29,6 @@ public class FourthActivity extends ListActivity {
         final ListView lstView = getListView();
         lstView.setTextFilterEnabled(true);
 
-        //details = getResources().getStringArray(R.array.allitems_array);
 
 switch (SelectionOptions){
 
