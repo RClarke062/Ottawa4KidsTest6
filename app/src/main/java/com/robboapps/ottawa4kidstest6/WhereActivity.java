@@ -29,6 +29,9 @@ public class WhereActivity extends AppCompatActivity {
     String LatLongString;
     String LatString;
     String LongString;
+    String VendorChoice;
+    String activityCategory;
+    String[] categoryArray;
     double LatNum;
     double LongNum;
 
@@ -37,6 +40,65 @@ public class WhereActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where);
 
+        final Bundle extras = getIntent().getExtras();
+        VendorChoice = extras.getString("VENDORCHOICE");
+        activityCategory = extras.getString("ACTIVITYCATEGORY");
+        System.out.println("XANADU56b choice and category  " + VendorChoice + activityCategory);
+
+        switch (activityCategory){
+
+            case ("Indoor Action"):
+                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                    }
+                }
+                break;
+
+            case ("Outdoor Action"):
+                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                    }
+                }
+                break;
+
+            case ("Educate Me!"):
+                categoryArray = getResources().getStringArray(R.array.educateme_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        System.out.println("XANADU98  latlong" + LatLongString);
+                    }
+                }
+                break;
+
+            case ("Shop till you Drop"):
+                categoryArray = getResources().getStringArray(R.array.shoptillyoudrop_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                    }
+                }
+                break;
+
+            case ("Time to Eat!"):
+                categoryArray = getResources().getStringArray(R.array.timetoeat_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                    }
+                }
+                break;
+        }
+/*
         Choice = getIntent().getStringExtra("str1");
         //mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -47,7 +109,7 @@ public class WhereActivity extends AppCompatActivity {
                 LatLongString = Options[4];
             }
         }
-
+*/
         LatLongStringParsed = LatLongString.split("\\|");
         LatString = LatLongStringParsed[0];
         LongString = LatLongStringParsed[1];
@@ -64,7 +126,8 @@ public class WhereActivity extends AppCompatActivity {
         }, 100);
 
         //String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?daddr=%f,%f (%s)", LatNum, LongNum, Choice);
-        String uri = String.format(Locale.ENGLISH,"geo:%f,%f?q=%s", LatNum, LongNum, Choice);
+        String uri = String.format(Locale.ENGLISH,"geo:%f,%f?q=%s", LatNum, LongNum, VendorChoice);
+        System.out.println("XANADU203  Lat and Long parsed  " + LatNum + LongNum);
         //mMap.addMarker(new MarkerOptions().title(Choice));
         Uri gmmIntentUri = Uri.parse(uri);
         //Uri gmmIntentUri = Uri.parse(LatNum, LongNum + Uri.encode("1st & Pike, Seattle"));

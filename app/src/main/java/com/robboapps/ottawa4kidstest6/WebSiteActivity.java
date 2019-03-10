@@ -10,17 +10,75 @@ public class WebSiteActivity extends AppCompatActivity {
     String[] outsidestuffchoice;
     String[] Options = new String[6];
     String Url;
-    //final Bundle extras = getIntent().getExtras();
-    //final String VendorChoice = extras.getString("VENDORCHOICE");
-    //final String SelectionOptions = extras.getString("SELECTIONOPTIONS");
     String VendorChoice;
+    String activityCategory;
+    String[] categoryArray;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_site);
 
-        VendorChoice= getIntent().getStringExtra("str1");
+        final Bundle extras = getIntent().getExtras();
+        VendorChoice = extras.getString("VENDORCHOICE");
+        activityCategory = extras.getString("ACTIVITYCATEGORY");
+        System.out.println("XANADU56b  " + VendorChoice);
+
+        switch (activityCategory){
+
+            case ("Indoor Action"):
+                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        Url = Options[3];
+                    }
+                }
+                break;
+
+            case ("Outdoor Action"):
+                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        Url = Options[3];
+                    }
+                }
+                break;
+
+            case ("Educate Me!"):
+                categoryArray = getResources().getStringArray(R.array.educateme_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        Url = Options[3];
+                    }
+                }
+                break;
+
+            case ("Shop till you Drop"):
+                categoryArray = getResources().getStringArray(R.array.shoptillyoudrop_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        Url = Options[3];
+                    }
+                }
+                break;
+
+            case ("Time to Eat!"):
+                categoryArray = getResources().getStringArray(R.array.timetoeat_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        Url = Options[3];
+                    }
+                }
+                break;
+        }
+
+        /*
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
@@ -28,6 +86,7 @@ public class WebSiteActivity extends AppCompatActivity {
                 Url = Options[3];
             }
         }
+        */
         WebView myWebView = (WebView) findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);

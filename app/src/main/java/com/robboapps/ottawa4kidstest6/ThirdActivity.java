@@ -10,8 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class ThirdActivity extends ListActivity {
 
@@ -20,18 +22,106 @@ public class ThirdActivity extends ListActivity {
     String[] Options;
     String[] Row;
     String[] SelectionArray;
+    ArrayList<String> selectionArrayList;
     Integer Count = 0;
     String VendorChoice;
     String SelectionOptions;
+    String activityType;
+    String activityCategory;
+    String[] vendorArray;
+    ArrayList<String> vendorArrayList;
+    String[] categoryArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Bundle extras = getIntent().getExtras();
+        activityType = extras.getString("ACTIVITYTYPE");
+        activityCategory = extras.getString("ACTIVITYCATEGORY");
+        System.out.println("XANADU91 activityType =  " + activityType + "activityCategory =  " + activityCategory);
+
         final ListView lstView = getListView();
         lstView.setTextFilterEnabled(true);
 
+        switch (activityCategory){
+
+            case ("Indoor Action"):
+                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                vendorArrayList = new ArrayList<>();
+                selectionArrayList = new ArrayList<>();
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Row = categoryArray[i].split(",");
+                    if (Row[1].equals(activityType)) {
+                        vendorArrayList.add(Row[2]);
+                        selectionArrayList.add(Row[6]);
+                    }
+                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
+                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    }
+                break;
+            case ("Outdoor Action"):
+                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                vendorArrayList = new ArrayList<>();
+                selectionArrayList = new ArrayList<>();
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Row = categoryArray[i].split(",");
+                    if (Row[1].equals(activityType)) {
+                        vendorArrayList.add(Row[2]);
+                        selectionArrayList.add(Row[6]);
+                    }
+                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
+                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                }
+                break;
+            case ("Educate Me!"):
+                categoryArray = getResources().getStringArray(R.array.educateme_array);
+                vendorArrayList = new ArrayList<>();
+                selectionArrayList = new ArrayList<>();
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Row = categoryArray[i].split(",");
+                    System.out.println("XANADU93 type and vendor is  " + Row[1] + Row[2]);
+                    if (Row[1].equals(activityType)) {
+                        vendorArrayList.add(Row[2]);
+                        selectionArrayList.add(Row[6]);
+                        System.out.println("XANADU92 type is  " + Row[1]);
+                    }
+                }
+                vendorArray = vendorArrayList.toArray(new String[0]);
+                SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                break;
+            case ("Shop till you Drop"):
+                categoryArray = getResources().getStringArray(R.array.shoptillyoudrop_array);
+                vendorArrayList = new ArrayList<>();
+                selectionArrayList = new ArrayList<>();
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Row = categoryArray[i].split(",");
+                    if (Row[1].equals(activityType)) {
+                        vendorArrayList.add(Row[2]);
+                        selectionArrayList.add(Row[6]);
+                    }
+                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
+                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                }
+                break;
+            case ("Time to Eat!"):
+                categoryArray = getResources().getStringArray(R.array.timetoeat_array);
+                vendorArrayList = new ArrayList<>();
+                selectionArrayList = new ArrayList<>();
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Row = categoryArray[i].split(",");
+                    if (Row[1].equals(activityType)) {
+                        vendorArrayList.add(Row[2]);
+                        selectionArrayList.add(Row[6]);
+                    }
+                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
+                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                }
+                break;
+        }
+
+        /*
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
@@ -54,8 +144,8 @@ public class ThirdActivity extends ListActivity {
                 Count = Count + 1;
             }
         }
-
-        String[] DisplayRow = new HashSet<String>(Arrays.asList(Row)).toArray(new String[0]);
+*/
+        String[] DisplayRow = new HashSet<String>(Arrays.asList(vendorArray)).toArray(new String[0]);
 
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow));
 
@@ -63,8 +153,8 @@ public class ThirdActivity extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?>parent,View v, int position, long id){
                 String  itemValue    = (String) lstView.getItemAtPosition(position);
-                for (int b = 0; b < Row.length; b++) {
-                    if (Row[b].equals(itemValue)) {
+                for (int b = 0; b < vendorArray.length; b++) {
+                    if (vendorArray[b].equals(itemValue)) {
                         SelectionOptions = SelectionArray[b];
                     }
                 }
@@ -74,6 +164,7 @@ public class ThirdActivity extends ListActivity {
                 Bundle extras = new Bundle();
                 extras.putString("VENDORCHOICE", itemValue);
                 extras.putString("SELECTIONOPTIONS", SelectionOptions);
+                extras.putString("ACTIVITYCATEGORY", activityCategory);
                 i.putExtras(extras);
                 startActivity(i);
                 //i.putExtra("str1", itemValue);

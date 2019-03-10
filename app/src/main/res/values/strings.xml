@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Ottawa4KidsTest6</string>
 
-    <string-array name="outsidestuff_array">
+    <string-array name="activitycategories_array">
+        <item>Indoor Action</item>
+        <item>Outdoor Action</item>
+        <item>Shop till you Drop</item>
+        <item>Time to Eat!</item>
+        <item>Educate Me!</item>
+    </string-array>
+
+    <string-array name="indooraction_array">
         <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.4468803|-75.7390535,Hull1,all</item>
         <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.4052373|-75.6273293,StLaurent,all</item>
         <item>Indoor Action,Crafts and Stuff,Mud Oven,https://www.mudoven.com/,45.394832|-75.6857837,OOS,all</item>
@@ -27,6 +35,9 @@
         <item>Indoor Action,Secret Spots,Butterfly Sanctuary,https://science.carleton.ca/outreach/butterfly-show,45.383711|-75.693625,OOS,threeA</item>
         <item>Indoor Action,Trampoline Parks,Skyzone,https://www.skyzone.com/ca-ottawa,45.382464|-75.6301577,OOS,all</item>
         <item>Indoor Action,Trampoline Parks,Xtreme Trampoline,https://www.xtpark.com/,45.298999|-75.9191087,Kanata,all</item>
+    </string-array>
+
+    <string-array name="outsidestuff_array">
         <item>Outdoor Action,Downhill Board and Ski,List of Local Resorts, https://www.ottawatourism.ca/ottawa-insider/skiing-in-the-ottawa-gatineau-region/,
             blart|blart,blart,one</item>
         <item>Outdoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
@@ -88,6 +99,9 @@
         <item>Outdoor Action,Secret Spots,Graffiti Wall,http://houseofpaint.ca/,45.3842396|-75.6911924,OOS,all</item>
         <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664|-75.7027112,Parliament,threeB</item>
         <item>Outdoor Action,Secret Spots,Hogsback Waterfall,http://ncc-ccn.gc.ca/places/hogs-back-park,45.3719725|-75.7080416,Hogsback,all</item>
+    </string-array>
+
+    <string-array name="educateme_array">
         <item>Educate Me!,Canadian Hot Spots,Governor General\'s Residence,https://www.gg.ca/en/visit-us/,45.4445002|-75.6879901,Edinburgh,all</item>
         <item>Educate Me!,Canadian Hot Spots,Laurier\'s House,https://www.pc.gc.ca/en/lhn-nhs/on/laurier/,45.4277331|-75.6801956,OttawaU,all</item>
         <item>Educate Me!,Canadian Hot Spots,Mackenzie King Estate,http://ncc-ccn.gc.ca/places/mackenzie-king-estate,45.4834557|-75.8501579,Chelsea,all</item>
@@ -110,6 +124,9 @@
         <item>Educate Me!,Museums,List of All Museums,https://www.ottawatourism.ca/see-and-do/museums/,blart|blart,blart,one</item>
         <item>Educate Me!,Walking Tours,History Tours,https://www.ottawawalkingtours.com/,45.447292|-75.736883,Downtown,threeA</item>
         <item>Educate Me!,Walking Tours,Haunted Walks,https://hauntedwalk.com/ottawa-tours/,45.423451|-75.6981247,Downtown,all</item>
+    </string-array>
+
+    <string-array name="shoptillyoudrop_array">
         <item>Shop till you Drop,Bookstores,Black Squirrel Books, https://www.blacksquirrelbooks.ca/,45.3946641|-75.6856839,OOS,all</item>
         <item>Shop till you Drop,Bookstores,Booksonbeechwood,https://store.booksonbeechwood.ca/,45.4398201|-75.6792246,Edinburgh,threeA</item>
         <item>Shop till you Drop,Bookstores,Chapters,https://www.chapters.indigo.ca/en-ca/home/storelocator/storeDetails/767/,
@@ -120,6 +137,9 @@
         <item>Shop till you Drop,Toy Shops,Mastermind Toys, https://www.mastermindtoys.com/,45.3080058|-75.9141275,Kanata,all</item>
         <item>Shop till you Drop,Toy Shops,Mrs. Tiggy Winkles,https://mrstiggywinkles.ca/,45.4026565|-75.6902014,Glebe,all</item>
         <item>Shop till you Drop,Toy Shops,Tag Along Toys, http://www.tagalongtoys.ca/,45.310768|-75.9228837,Kanata,all</item>
+    </string-array>
+
+    <string-array name="timetoeat_array">
         <item>Time to Eat!,Sweet Treats,Beaver Tails, http://beavertails.com/,45.4274237|-75.6938669,Downtown,all</item>
         <item>Time to Eat!,Sweet Treats,Cupcake Lounge, https://thecupcakelounge.com/,45.428559|-75.6958792,Downtown,all</item>
         <item>Time to Eat!,Sweet Treats,ThimbleCakes, http://thimblecakes.ca/,45.4145798|-75.6956539,Elgin St,all</item>
@@ -142,7 +162,6 @@
         <item>Time to Eat!,Outdoor Markets,Ottawa Farmer\'s Market,https://ottawafarmersmarket.ca/,45.3998954|-75.6854072,OOS,all</item>
         <item>Time to Eat!,Outdoor Markets,Parkdale Market,http://ottawamarkets.com/,45.4011853|-75.7317195,Westborough,all</item>
         <item>Time to Eat!,Outdoor Markets,Main St. Market,http://mainfarmersmarket.org/,45.4080814|-75.6796549,Main Street,all</item>
-
     </string-array>
 
     <string-array name="allitems_array">

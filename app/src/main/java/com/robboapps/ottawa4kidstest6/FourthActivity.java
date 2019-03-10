@@ -16,6 +16,7 @@ public class FourthActivity extends ListActivity {
     String[] details;
     String VendorChoice;
     String SelectionOptions;
+    String activityCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class FourthActivity extends ListActivity {
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         SelectionOptions = extras.getString("SELECTIONOPTIONS");
+        activityCategory = extras.getString("ACTIVITYCATEGORY");
         System.out.println("XANADU56b  " + VendorChoice + SelectionOptions);
 
         final ListView lstView = getListView();
@@ -62,7 +64,10 @@ switch (SelectionOptions){
                         Intent i = new Intent("com.robboapps.ottawa4kidstest6.WebSiteActivity");
                         //---use putExtra() to send the ThirdActivity choice to the WebSite Activity---
                         //Bundle extras = getIntent().getExtras();
-                        i.putExtra("str1", VendorChoice);
+                        Bundle extras = new Bundle();
+                        extras.putString("VENDORCHOICE", VendorChoice);
+                        extras.putString("ACTIVITYCATEGORY", activityCategory);
+                        i.putExtras(extras);
                         startActivity(i);
                         break;
                     case "Where is It":
@@ -71,7 +76,11 @@ switch (SelectionOptions){
                         //Bundle extras2 = getIntent().getExtras();
                         //extras.putString("VENDORCHOICE", VendorChoice);
                         //extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                        a.putExtra("str1", VendorChoice);
+                        //a.putExtra("str1", VendorChoice);
+                        Bundle extras2 = new Bundle();
+                        extras2.putString("VENDORCHOICE", VendorChoice);
+                        extras2.putString("ACTIVITYCATEGORY", activityCategory);
+                        a.putExtras(extras2);
                         startActivity(a);
                         break;
                     case "Side Trips for Adults":
@@ -79,7 +88,11 @@ switch (SelectionOptions){
                         //---use putExtra() to send the ThirdActivity choice to the SideTrips Activity---
                         //extras.putString("VENDORCHOICE", VendorChoice);
                         //extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                        b.putExtra("str1", VendorChoice);
+                        //b.putExtra("str1", VendorChoice);
+                        Bundle extras3 = new Bundle();
+                        extras3.putString("VENDORCHOICE", VendorChoice);
+                        extras3.putString("ACTIVITYCATEGORY", activityCategory);
+                        b.putExtras(extras3);
                         startActivity(b);
                         break;
                     case "Whats Cool":

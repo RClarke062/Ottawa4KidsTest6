@@ -36,13 +36,16 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
     String[] SideTripsMarker = new String[3];
     String[] Options = new String[6];
     String[] LatLongStringParsed = new String[2];
-    String Choice;
+    String[] categoryArray;
+    //String Choice;
     String SideTripsKey;
     String LatLongString;
     double LatNum;
     double LongNum;
     String LatStringST;
     String LongStringST;
+    String VendorChoice;
+    String activityCategory;
     double LatNumST;
     double LongNumST;
     private List<Marker> markerList = new ArrayList<>();
@@ -53,9 +56,82 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_trips);
 
-        Choice = getIntent().getStringExtra("str1");
+        final Bundle extras = getIntent().getExtras();
+        VendorChoice = extras.getString("VENDORCHOICE");
+        activityCategory = extras.getString("ACTIVITYCATEGORY");
+        System.out.println("XANADU56b choice and category  " + VendorChoice + activityCategory);
+
+        //Choice = getIntent().getStringExtra("str1");
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        switch (activityCategory){
+
+            case ("Indoor Action"):
+                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        SideTripsKey = Options[5];
+                        System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                        System.out.println("XANADU in Outsidestuffchoice" + VendorChoice);
+                    }
+                }
+                break;
+
+            case ("Outdoor Action"):
+                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        SideTripsKey = Options[5];
+                        System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                        System.out.println("XANADU in Outsidestuffchoice" + VendorChoice);
+                    }
+                }
+                break;
+
+            case ("Educate Me!"):
+                categoryArray = getResources().getStringArray(R.array.educateme_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        SideTripsKey = Options[5];
+                        System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                        System.out.println("XANADU in Outsidestuffchoice" + VendorChoice);
+                    }
+                }
+                break;
+
+            case ("Shop till you Drop"):
+                categoryArray = getResources().getStringArray(R.array.shoptillyoudrop_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        SideTripsKey = Options[5];
+                        System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                        System.out.println("XANADU in Outsidestuffchoice" + VendorChoice);
+                    }
+                }
+                break;
+
+            case ("Time to Eat!"):
+                categoryArray = getResources().getStringArray(R.array.timetoeat_array);
+                for (int i = 0; i < categoryArray.length; i++) {
+                    Options = categoryArray[i].split(",");
+                    if (Options[2].equals(VendorChoice)) {
+                        LatLongString = Options[4];
+                        SideTripsKey = Options[5];
+                        System.out.println("XANADU in Outsidestuffchoice" + SideTripsKey);
+                        System.out.println("XANADU in Outsidestuffchoice" + VendorChoice);
+                    }
+                }
+                break;
+        }
+/*
         outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
         for (int i = 0; i < outsidestuffchoice.length; i++) {
             Options = outsidestuffchoice[i].split(",");
@@ -66,7 +142,7 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
                 System.out.println("XANADU in Outsidestuffchoice" + Choice);
             }
         }
-
+*/
         LatLongStringParsed = LatLongString.split("\\|");
         LatNum = Double.parseDouble(LatLongStringParsed[0]);
         LongNum = Double.parseDouble(LatLongStringParsed[1]);
@@ -162,7 +238,7 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
         getLocationPermission();
 
         LatLng ChoiceMarker = new LatLng(LatNum, LongNum);
-        Marker marker = mMap.addMarker(new MarkerOptions().position(ChoiceMarker).title(Choice));
+        Marker marker = mMap.addMarker(new MarkerOptions().position(ChoiceMarker).title(VendorChoice));
         marker.showInfoWindow();
         markerList.add(marker);
 

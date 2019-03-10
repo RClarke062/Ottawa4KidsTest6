@@ -41,14 +41,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.robboapps.ottawa4kidstest6.ThirdActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.ThirdActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            >
         </activity>
+
         <activity android:name="com.robboapps.ottawa4kidstest6.FourthActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.FourthActivity" />
@@ -56,6 +57,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.robboapps.ottawa4kidstest6.WebSiteActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.WebSiteActivity" />
@@ -63,6 +65,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.robboapps.ottawa4kidstest6.SideTripsActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.SideTripsActivity" />
@@ -70,6 +73,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.robboapps.ottawa4kidstest6.WhatsCoolActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.WhatsCoolActivity" />
@@ -77,14 +81,14 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.robboapps.ottawa4kidstest6.WhereActivity">
+        <activity android:name="com.robboapps.ottawa4kidstest6.WhereActivity">
             <intent-filter>
                 <action android:name="com.robboapps.ottawa4kidstest6.WhereActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
