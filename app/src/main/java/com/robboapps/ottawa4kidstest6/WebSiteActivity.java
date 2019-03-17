@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import java.util.Calendar;
+
 public class WebSiteActivity extends AppCompatActivity {
 
     String[] outsidestuffchoice;
@@ -19,6 +21,9 @@ public class WebSiteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_site);
+        Calendar calendar = Calendar.getInstance();
+        int month = calendar.get(Calendar.MONTH) + 1;
+        System.out.println("ZIPPY" + month);
 
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
@@ -28,7 +33,11 @@ public class WebSiteActivity extends AppCompatActivity {
         switch (activityCategory){
 
             case ("Indoor Action"):
-                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                if (month==10){
+                    categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                }
                 for (int i = 0; i < categoryArray.length; i++) {
                     Options = categoryArray[i].split(",");
                     if (Options[2].equals(VendorChoice)) {
@@ -38,7 +47,11 @@ public class WebSiteActivity extends AppCompatActivity {
                 break;
 
             case ("Outdoor Action"):
-                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                if (month> 4 && month<10){
+                    categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
+                }
                 for (int i = 0; i < categoryArray.length; i++) {
                     Options = categoryArray[i].split(",");
                     if (Options[2].equals(VendorChoice)) {

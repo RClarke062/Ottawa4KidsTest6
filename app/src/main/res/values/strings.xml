@@ -2,14 +2,42 @@
     <string name="app_name">Ottawa4KidsTest6</string>
 
     <string-array name="activitycategories_array">
+        <item>Educate Me!</item>
         <item>Indoor Action</item>
         <item>Outdoor Action</item>
         <item>Shop till you Drop</item>
         <item>Time to Eat!</item>
-        <item>Educate Me!</item>
+
     </string-array>
 
     <string-array name="indooraction_array">
+    <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.4468803|-75.7390535,Hull1,all</item>
+    <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.4052373|-75.6273293,StLaurent,all</item>
+    <item>Indoor Action,Crafts and Stuff,Mud Oven,https://www.mudoven.com/,45.394832|-75.6857837,OOS,all</item>
+    <item>Indoor Action,Crafts and Stuff,Wabi Sabi,https://wabi-sabi.ca/,45.403326|-75.7270905,Westborough,all</item>
+    <item>Indoor Action,Fun Parks,Cosmic Adventures,http://www.cosmicadventures.ca/,45.4308464|-75.6237935,Orleans,threeA</item>
+    <item>Indoor Action,Fun Parks,Fun Haven,http://www.funhaven.com/,45.3538729|-75.7826372,Bayshore, threeA</item>
+    <item>Indoor Action,Fun Parks,Adventure Land,https://www.adventurelandottawa.ca/,45.3760353|-75.6716126,SouthKeys,threeA</item>
+    <item>Indoor Action,Fun Parks,Ikea Ball Room,https://www.ikea.com/ms/en_CA/locator/ottawa.html,45.3503524|-75.7859709,Bayshore,threeB </item>
+    <item>Indoor Action,Indoor Go-Karting,Top Karting,http://www.topkarting.com/,45.4581953|-75.7393156,Hull1,threeA</item>
+    <item>Indoor Action,Laser Tag,Fun Haven,http://www.funhaven.com/,45.3538729|-75.7826372,Bayshore,threeA</item>
+    <item>Indoor Action,Laser Tag,Laser Quest,https://www.laserquest.com/on-ottawa/,45.4040912|-75.6289438,StLaurent,threeA</item>
+    <item>Indoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
+    <item>Indoor Action,Indoor MiniGolf,Putting Edge,http://www.puttingedge.com/,45.338863|-75.7269307,Nepean,threeA</item>
+    <item>Indoor Action,Movies,Downtown Rep Theatre,https://www.bytowne.ca/,45.4295816|-75.6869569,OttawaU,all</item>
+    <item>Indoor Action,Movies,Neighbourhood Rep Theatre,http://mayfairtheatre.ca/,45.3946242|-75.685931,OOS,all</item>
+    <item>Indoor Action,Public Pools,Public Pool Locations,https://ottawa.ca/en/residents/recreation-and-parks/swimming,blart|blart,blart,one</item>
+    <item>Indoor Action,Public Pools,Kanata Wave Pool,https://ottawa.ca/en/residents/facilities/kanata-leisure-centre-and-wave-pool,
+            45.3111262|-75.9013908,Kanata,one</item>
+    <item>Indoor Action,Public Pools,Splash Wave Pool,https://ottawa.ca/en/residents/facilities/splash-wave-pool,
+            45.4374975|-75.6025427,Orleans,one</item>
+    <item>Indoor Action,Secret Spots,Glass Elevator @ Ottawa U,blart,45.419100|-75.678165,OttawaU,threeB</item>
+    <item>Indoor Action,Secret Spots,Secret Tunnels,blart,45.386063|-75.693745,OOS,threeB</item>
+    <item>Indoor Action,Trampoline Parks,Skyzone,https://www.skyzone.com/ca-ottawa,45.382464|-75.6301577,OOS,all</item>
+    <item>Indoor Action,Trampoline Parks,Xtreme Trampoline,https://www.xtpark.com/,45.298999|-75.9191087,Kanata,all</item>
+</string-array>
+
+    <string-array name="indooractionoctober_array">
         <item>Indoor Action,Climbing Walls,Altitude Gym,http://altitudegym.ca/en/gatineau/,45.4468803|-75.7390535,Hull1,all</item>
         <item>Indoor Action,Climbing Walls,Coyote Rock Gym,https://coyoterockgym.ca/,45.4052373|-75.6273293,StLaurent,all</item>
         <item>Indoor Action,Crafts and Stuff,Mud Oven,https://www.mudoven.com/,45.394832|-75.6857837,OOS,all</item>
@@ -37,7 +65,63 @@
         <item>Indoor Action,Trampoline Parks,Xtreme Trampoline,https://www.xtpark.com/,45.298999|-75.9191087,Kanata,all</item>
     </string-array>
 
-    <string-array name="outsidestuff_array">
+    <string-array name="outdooractionsummer_array">
+    <item>Outdoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
+    <item>Outdoor Action,Premium Picnic Spots,By the Inukshuks,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
+            45.4107358|-75.7464677,Westborough,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Ottawa River Parkway,blart,45.379148|-75.779837,Westborough,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Parliament Panorama,blart,45.428183|-75.699162,Parliament,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Rockcliffe Refuge,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Up Ottawa River,blart,45.379805|-75.802254,Aylmer,threeA</item>
+    <item>Outdoor Action,Premium Picnic Spots,Vincent Massey Park,blart,45.3783501|-75.7010951,OOS,threeA</item>
+    <item>Outdoor Action,Cool Parks,Bottom of Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
+    <item>Outdoor Action,Cool Parks,Boat-Floating Pond,blart,45.404337|-75.6823132,Glebe,threeA</item>
+    <item>Outdoor Action,Cool Parks,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
+    <item>Outdoor Action,Cool Parks,NearDownTownShopping Park,blart,45.4272947|-75.699222,Parliament,threeA</item>
+    <item>Outdoor Action,Cool Parks,RunAround Park,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
+    <item>Outdoor Action,Cool Parks,Paper Airplane Hill,blart,45.390743|-75.7053765,DowsLake,threeA</item>
+    <item>Outdoor Action,Cool Parks,Rock Sculptures Park,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
+            45.4107358|-75.7464677,Westborough,threeA</item>
+    <item>Outdoor Action,Outdoor Go-Karting,Karters Korner,http://karterskorner.com/,45.2254362|-75.8949015,Stittsville,threeA</item>
+    <item>Outdoor Action,Outdoor Go-Karting,Amigo Karting,http://amigokarting.com/,45.505264|-75.5471097,Hull1,threeA</item>
+    <item>Outdoor Action,Beaches,Brittania,blart,45.3656839|-75.8032139,Brittania,threeA</item>
+    <item>Outdoor Action,Beaches,Lac Phillipe,blart,45.6129792|-76.0122826,Chelsea,threeA</item>
+    <item>Outdoor Action,Beaches,Meech Lake,blart,45.5286959|-75.8722773,Chelsea,threeA</item>
+    <item>Outdoor Action,Beaches,Mooney\'s Bay,blart,45.3671918|-75.6937111,Hogsback,all</item>
+    <item>Outdoor Action,Beaches,The Secret Beach,blart,45.407572|-75.746636,Westborough,threeA</item>
+    <item>Outdoor Action,Beaches,Westborough,blart,45.3974026|-75.7581246,Westborough,threeA</item>
+    <item>Outdoor Action,Bicycling,Mountain Biking,https://www.ottawatourism.ca/ottawa-insider/mountain-biking-in-ottawa/,blart|blart,blart,one</item>
+    <item>Outdoor Action,Bicycling,Ottawa Bike Paths,
+            https://ottawa.ca/en/residents/transportation-and-parking/cycling/routes-and-maps#official-cycling-map-ottawa-gatineau,blart|blart,blart,one</item>
+    <item>Outdoor Action,Bicycling,RentaBike,http://www.rentabike.ca/,45.424698|-75.6964926,Parliament,threeA</item>
+    <item>Outdoor Action,Bicycling,Ottawa Cycling Tours,http://www.ottawacyclingtours.com/,blart|blart,blart,one</item>
+    <item>Outdoor Action,Bicycling,Velogo,https://gohopr.com/velogo/,blart|blart,blart,one</item>
+    <item>Outdoor Action,Boat Rides,Capital Cruises,http://www.capitalcruises.ca/,45.4305935|-75.7080422,Parliament,all</item>
+    <item>Outdoor Action,Boat Rides,Pirate Adventures,https://www.pirateadventuresottawa.com/,45.3701264|-75.6979439,Hogsback,all</item>
+    <item>Outdoor Action,Boat Rides,Lady Dive Tours,https://ladydive.com/,45.423822|-75.6986396,Parliament,all</item>
+    <item>Outdoor Action,Boat Rides,Paddle Boat Rental,http://www.dowslake.com/summer_rentals.php,45.3963487|-75.7078906,DowsLake,threeA</item>
+    <item>Outdoor Action,Boat Rides,Paul\'s Boat Lines,https://paulsboatline.com/en/,45.4321769|-75.7097061,Hull,all</item>
+    <item>Outdoor Action,Boat Rides,Rideau Canal Cruises,http://rideaucanalcruises.ca/en/,45.4230839|-75.6956547,Parliament,threeA</item>
+    <item>Outdoor Action,Water Parks,Cascades,https://montcascades.ca/aqua/,45.5857388|-75.8476,Hull2,threeA</item>
+    <item>Outdoor Action,Water Parks,Calypso,https://www.calypsopark.com/en/,45.3149921|-75.2204962,Hull2</item>
+    <item>Outdoor Action,Plane Rides,Biplane Ride,https://ingeniumcanada.org/rides-and-simulations/vintage-biplane-rides,45.458542|-75.6462657,Edinburgh,threeA</item>
+    <item>Outdoor Action,Plane Rides,Helicopter,https://ingeniumcanada.org/rides-and-simulations/helicopter-rides,45.4567103|-75.6517694,Edinburgh,threeA</item>
+    <item>Outdoor Action,Plane Rides,Sightseeing Plane,https://www.rfc.ca/en/sightseeing/,45.4621339|-75.6479119,Edinburgh,threeA</item>
+    <item>Outdoor Action,Hiking,Gatineau Trails,http://ncc-ccn.gc.ca/places/hiking-and-walking-gatineau-park,blart|blart,Chelsea,one</item>
+    <item>Outdoor Action,Hiking,Gatineau Tours and Events,http://ncc-ccn.gc.ca/events,blart|blart,blart,one</item>
+    <item>Outdoor Action,Hiking,Ottawa Green Belt,http://ncc-ccn.gc.ca/places/hiking-and-walking-greenbelt,blart|blart,blart,one</item>
+    <item>Outdoor Action,Outdoor MiniGolf,Mini Golf Gardens,https://minigolfgardens.com/,45.3400004|-75.7279115,Merrivale,threeA</item>
+    <item>Outdoor Action,Outdoor MiniGolf,Dunn Dee\'s Mini Golf,https://www.dunnderosa.ca/dunnds-home,45.498505|-75.8161487,Chelsea,all</item>
+    <item>Outdoor Action,Secret Spots,Adventure Paths,http://ofnc.ca/programs/fletcher-wildlife-garden,45.3870864|-75.7053924,DowsLake,threeB</item>
+    <item>Outdoor Action,Secret Spots,Graffiti Wall,http://houseofpaint.ca/,45.3842396|-75.6911924,OOS,all</item>
+    <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664|-75.7027112,Parliament,threeB</item>
+    <item>Outdoor Action,Secret Spots,Hogsback Waterfall,http://ncc-ccn.gc.ca/places/hogs-back-park,45.3719725|-75.7080416,Hogsback,all</item>
+</string-array>
+
+    <string-array name="outdooractionwinter_array">
+        <item>Outdoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
         <item>Outdoor Action,Downhill Board and Ski,List of Local Resorts, https://www.ottawatourism.ca/ottawa-insider/skiing-in-the-ottawa-gatineau-region/,
             blart|blart,blart,one</item>
         <item>Outdoor Action,Local Events,Events Calendar,https://www.ottawatourism.ca/events/,blart|blart,blart,one</item>
@@ -48,57 +132,6 @@
         <item>Outdoor Action,X-Country Ski,Gatineau Park,http://ncc-ccn.gc.ca/places/cross-country-skiing,blart|blart,Chelsea,one</item>
         <item>Outdoor Action,X-Country Ski,Greenbelt,http://skitrails.xcottawa.ca/skitrails_green_belt.php,blart|blart,blart,one</item>
         <item>Outdoor Action,X-Country Ski,All X-Country,http://xcskiing.ca/,blart|blart,blart,one</item>
-        <item>Outdoor Action,Premium Picnic Spots,By the Inukshuks,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
-            45.4107358|-75.7464677,Westborough,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Ottawa River Parkway,blart,45.379148|-75.779837,Westborough,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Parliament Panorama,blart,45.428183|-75.699162,Parliament,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Rockcliffe Refuge,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Up Ottawa River,blart,45.379805|-75.802254,Aylmer,threeA</item>
-        <item>Outdoor Action,Premium Picnic Spots,Vincent Massey Park,blart,45.3783501|-75.7010951,OOS,threeA</item>
-        <item>Outdoor Action,Cool Parks,Bottom of Parliament Hill,blart,45.426448|-75.7019157,Parliament,threeA</item>
-        <item>Outdoor Action,Cool Parks,Boat-Floating Pond,blart,45.404337|-75.6823132,Glebe,threeA</item>
-        <item>Outdoor Action,Cool Parks,Downtown Lake,blart,45.3943693|-75.7059284,DowsLake,threeA</item>
-        <item>Outdoor Action,Cool Parks,NearDownTownShopping Park,blart,45.4272947|-75.699222,Parliament,threeA</item>
-        <item>Outdoor Action,Cool Parks,RunAround Park,blart,45.449997|-75.687932,Rockcliffe,threeA</item>
-        <item>Outdoor Action,Cool Parks,Paper Airplane Hill,blart,45.390743|-75.7053765,DowsLake,threeA</item>
-        <item>Outdoor Action,Cool Parks,Rock Sculptures Park,http://discoverottawa.blogspot.com/2012/05/inukshuks-on-ottawa-river.html,
-            45.4107358|-75.7464677,Westborough,threeA</item>
-        <item>Outdoor Action,Outdoor Go-Karting,Karters Korner,http://karterskorner.com/,45.2254362|-75.8949015,Stittsville,threeA</item>
-        <item>Outdoor Action,Outdoor Go-Karting,Amigo Karting,http://amigokarting.com/,45.505264|-75.5471097,Hull1,threeA</item>
-        <item>Outdoor Action,Beaches,Brittania,blart,45.3656839|-75.8032139,Brittania,threeA</item>
-        <item>Outdoor Action,Beaches,Lac Phillipe,blart,45.6129792|-76.0122826,Chelsea,threeA</item>
-        <item>Outdoor Action,Beaches,Meech Lake,blart,45.5286959|-75.8722773,Chelsea,threeA</item>
-        <item>Outdoor Action,Beaches,Mooney\'s Bay,blart,45.3671918|-75.6937111,Hogsback,all</item>
-        <item>Outdoor Action,Beaches,The Secret Beach,blart,45.407572|-75.746636,Westborough,threeA</item>
-        <item>Outdoor Action,Beaches,Westborough,blart,45.3974026|-75.7581246,Westborough,threeA</item>
-        <item>Outdoor Action,Bicycling,Mountain Biking,https://www.ottawatourism.ca/ottawa-insider/mountain-biking-in-ottawa/,blart|blart,blart,one</item>
-        <item>Outdoor Action,Bicycling,Ottawa Bike Paths,
-            https://ottawa.ca/en/residents/transportation-and-parking/cycling/routes-and-maps#official-cycling-map-ottawa-gatineau,blart|blart,blart,one</item>
-        <item>Outdoor Action,Bicycling,RentaBike,http://www.rentabike.ca/,45.424698|-75.6964926,Parliament,threeA</item>
-        <item>Outdoor Action,Bicycling,Ottawa Cycling Tours,http://www.ottawacyclingtours.com/,blart|blart,blart,one</item>
-        <item>Outdoor Action,Bicycling,Velogo,https://gohopr.com/velogo/,blart|blart,blart,one</item>
-        <item>Outdoor Action,Boat Rides,Capital Cruises,http://www.capitalcruises.ca/,45.4305935|-75.7080422,Parliament,all</item>
-        <item>Outdoor Action,Boat Rides,Pirate Adventures,https://www.pirateadventuresottawa.com/,45.3701264|-75.6979439,Hogsback,all</item>
-        <item>Outdoor Action,Boat Rides,Lady Dive Tours,https://ladydive.com/,45.423822|-75.6986396,Parliament,all</item>
-        <item>Outdoor Action,Boat Rides,Paddle Boat Rental,http://www.dowslake.com/summer_rentals.php,45.3963487|-75.7078906,DowsLake,threeA</item>
-        <item>Outdoor Action,Boat Rides,Paul\'s Boat Lines,https://paulsboatline.com/en/,45.4321769|-75.7097061,Hull,all</item>
-        <item>Outdoor Action,Boat Rides,Rideau Canal Cruises,http://rideaucanalcruises.ca/en/,45.4230839|-75.6956547,Parliament,threeA</item>
-        <item>Outdoor Action,Water Parks,Cascades,https://montcascades.ca/aqua/,45.5857388|-75.8476,Hull2,threeA</item>
-        <item>Outdoor Action,Water Parks,Calypso,https://www.calypsopark.com/en/,45.3149921|-75.2204962,Hull2</item>
-        <item>Outdoor Action,Plane Rides,Biplane Ride,https://ingeniumcanada.org/rides-and-simulations/vintage-biplane-rides,45.458542|-75.6462657,Edinburgh,threeA</item>
-        <item>Outdoor Action,Plane Rides,Helicopter,https://ingeniumcanada.org/rides-and-simulations/helicopter-rides,45.4567103|-75.6517694,Edinburgh,threeA</item>
-        <item>Outdoor Action,Plane Rides,Sightseeing Plane,https://www.rfc.ca/en/sightseeing/,45.4621339|-75.6479119,Edinburgh,threeA</item>
-        <item>Outdoor Action,Hiking,Gatineau Trails,http://ncc-ccn.gc.ca/places/hiking-and-walking-gatineau-park,blart|blart,Chelsea,one</item>
-        <item>Outdoor Action,Hiking,Gatineau Tours and Events,http://ncc-ccn.gc.ca/events,blart|blart,blart,one</item>
-        <item>Outdoor Action,Hiking,Ottawa Green Belt,http://ncc-ccn.gc.ca/places/hiking-and-walking-greenbelt,blart|blart,blart,one</item>
-        <item>Outdoor Action,Outdoor MiniGolf,Mini Golf Gardens,https://minigolfgardens.com/,45.3400004|-75.7279115,Merrivale,threeA</item>
-        <item>Outdoor Action,Outdoor MiniGolf,Dunn Dee\'s Mini Golf,https://www.dunnderosa.ca/dunnds-home,45.498505|-75.8161487,Chelsea,all</item>
-        <item>Outdoor Action,Secret Spots,Adventure Paths,http://ofnc.ca/programs/fletcher-wildlife-garden,45.3870864|-75.7053924,DowsLake,threeB</item>
-        <item>Outdoor Action,Secret Spots,Graffiti Wall,http://houseofpaint.ca/,45.3842396|-75.6911924,OOS,all</item>
-        <item>Outdoor Action,Secret Spots,Hidden Stairs,blart,45.424664|-75.7027112,Parliament,threeB</item>
-        <item>Outdoor Action,Secret Spots,Hogsback Waterfall,http://ncc-ccn.gc.ca/places/hogs-back-park,45.3719725|-75.7080416,Hogsback,all</item>
     </string-array>
 
     <string-array name="educateme_array">

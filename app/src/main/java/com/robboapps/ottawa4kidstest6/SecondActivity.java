@@ -12,22 +12,25 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashSet;
 
 public class SecondActivity extends ListActivity {
 
-    String[] outsidestuffchoice;
-    String[] Options;
     String[] Row;
     String[] Type;
     String[] categoryArray;
-    Integer Count = 0;
+    ArrayList<String> sortedArrayList;
     String activityCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
+        Calendar calendar = Calendar.getInstance();
+        int month = calendar.get(Calendar.MONTH) + 1;
+        System.out.println("ZIPPY" + month);
 
         final ListView lstView = getListView();
         lstView.setTextFilterEnabled(true);
@@ -37,15 +40,25 @@ public class SecondActivity extends ListActivity {
         switch (activityCategory){
 
             case ("Indoor Action"):
-                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                if (month==10){
+                    categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                }
                 Type = new String[categoryArray.length];
+
                 for (int i = 0; i < categoryArray.length; i++) {
                     Row = categoryArray[i].split(",");
                     Type[i] = Row[1];
                 }
                 break;
             case ("Outdoor Action"):
-                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+
+                if (month> 4 && month<10){
+                    categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
+                }
                 Type = new String[categoryArray.length];
                 for (int i = 0; i < categoryArray.length; i++) {
                     Row = categoryArray[i].split(",");
@@ -101,9 +114,17 @@ public class SecondActivity extends ListActivity {
 
             */
                 //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
-                String[] DisplayRow = new HashSet<String>(Arrays.asList(Type)).toArray(new String[0]);
+        //Arrays.sort(Type);
+        String[] DisplayRow = new HashSet<String>(Arrays.asList(Type)).toArray(new String[0]);
+        sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        Collections.sort(sortedArrayList);
+        System.out.println("ZIPPY" + sortedArrayList);
+
+        //Arrays.sort(DisplayRow);
                 //display only unique items
-                setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow));
+        //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow);
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sortedArrayList));
+
 
                 lstView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

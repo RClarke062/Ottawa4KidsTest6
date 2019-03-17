@@ -17,6 +17,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 //public class WhereActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -39,6 +40,9 @@ public class WhereActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where);
+        Calendar calendar = Calendar.getInstance();
+        int month = calendar.get(Calendar.MONTH) + 1;
+        System.out.println("ZIPPY" + month);
 
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
@@ -48,7 +52,11 @@ public class WhereActivity extends AppCompatActivity {
         switch (activityCategory){
 
             case ("Indoor Action"):
-                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                if (month==10){
+                    categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                }
                 for (int i = 0; i < categoryArray.length; i++) {
                     Options = categoryArray[i].split(",");
                     if (Options[2].equals(VendorChoice)) {
@@ -58,7 +66,11 @@ public class WhereActivity extends AppCompatActivity {
                 break;
 
             case ("Outdoor Action"):
-                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                if (month> 4 && month<10){
+                    categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
+                }
                 for (int i = 0; i < categoryArray.length; i++) {
                     Options = categoryArray[i].split(",");
                     if (Options[2].equals(VendorChoice)) {

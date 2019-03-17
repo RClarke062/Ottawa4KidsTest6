@@ -4,6 +4,7 @@ package com.robboapps.ottawa4kidstest6;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +13,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -23,6 +27,7 @@ public class ThirdActivity extends ListActivity {
     String[] Row;
     String[] SelectionArray;
     ArrayList<String> selectionArrayList;
+    ArrayList<String> sortedArrayList;
     Integer Count = 0;
     String VendorChoice;
     String SelectionOptions;
@@ -35,7 +40,10 @@ public class ThirdActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_third);
+        Calendar calendar = Calendar.getInstance();
+        int month = calendar.get(Calendar.MONTH) + 1;
+        System.out.println("ZIPPY" + month);
 
         final Bundle extras = getIntent().getExtras();
         activityType = extras.getString("ACTIVITYTYPE");
@@ -48,7 +56,11 @@ public class ThirdActivity extends ListActivity {
         switch (activityCategory){
 
             case ("Indoor Action"):
-                categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                if (month==10){
+                    categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.indooraction_array);
+                }
                 vendorArrayList = new ArrayList<>();
                 selectionArrayList = new ArrayList<>();
                 for (int i = 0; i < categoryArray.length; i++) {
@@ -57,12 +69,16 @@ public class ThirdActivity extends ListActivity {
                         vendorArrayList.add(Row[2]);
                         selectionArrayList.add(Row[6]);
                     }
-                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
-                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    vendorArray = vendorArrayList.toArray(new String[0]);
+                    SelectionArray = selectionArrayList.toArray(new String[0]);
                     }
                 break;
             case ("Outdoor Action"):
-                categoryArray = getResources().getStringArray(R.array.outsidestuff_array);
+                if (month> 4 && month<10){
+                    categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
+                }else {
+                    categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
+                }
                 vendorArrayList = new ArrayList<>();
                 selectionArrayList = new ArrayList<>();
                 for (int i = 0; i < categoryArray.length; i++) {
@@ -71,8 +87,8 @@ public class ThirdActivity extends ListActivity {
                         vendorArrayList.add(Row[2]);
                         selectionArrayList.add(Row[6]);
                     }
-                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
-                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    vendorArray = vendorArrayList.toArray(new String[0]);
+                    SelectionArray = selectionArrayList.toArray(new String[0]);
                 }
                 break;
             case ("Educate Me!"):
@@ -89,7 +105,7 @@ public class ThirdActivity extends ListActivity {
                     }
                 }
                 vendorArray = vendorArrayList.toArray(new String[0]);
-                SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                SelectionArray = selectionArrayList.toArray(new String[0]);
                 break;
             case ("Shop till you Drop"):
                 categoryArray = getResources().getStringArray(R.array.shoptillyoudrop_array);
@@ -101,8 +117,10 @@ public class ThirdActivity extends ListActivity {
                         vendorArrayList.add(Row[2]);
                         selectionArrayList.add(Row[6]);
                     }
-                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
-                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    //vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
+                    //SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    vendorArray = vendorArrayList.toArray(new String[0]);
+                    SelectionArray = selectionArrayList.toArray(new String[0]);
                 }
                 break;
             case ("Time to Eat!"):
@@ -115,8 +133,8 @@ public class ThirdActivity extends ListActivity {
                         vendorArrayList.add(Row[2]);
                         selectionArrayList.add(Row[6]);
                     }
-                    vendorArray = vendorArrayList.toArray(new String[vendorArrayList.size()]);
-                    SelectionArray = selectionArrayList.toArray(new String[selectionArrayList.size()]);
+                    vendorArray = vendorArrayList.toArray(new String[0]);
+                    SelectionArray = selectionArrayList.toArray(new String[0]);
                 }
                 break;
         }
@@ -145,9 +163,12 @@ public class ThirdActivity extends ListActivity {
             }
         }
 */
+        Arrays.sort(vendorArray);
         String[] DisplayRow = new HashSet<String>(Arrays.asList(vendorArray)).toArray(new String[0]);
+        sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        Collections.sort(sortedArrayList);
 
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow));
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sortedArrayList));
 
         lstView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
