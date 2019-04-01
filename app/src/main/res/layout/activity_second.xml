@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.robboapps.ottawa4kidstest6.SecondActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
 
-    <ListView
-        android:id="@android:id/list"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/b" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@+id/label"
+        android:textSize="30sp"
+        android:textColor="#010203"
+        android:fontFamily="@font/markerfelt">
+    </TextView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

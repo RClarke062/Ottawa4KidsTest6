@@ -10,13 +10,42 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 
 public class MainActivity extends ListActivity {
 
     String[] activityCategories;
+    ArrayList<String> sortedArrayList;
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        activityCategories = getResources().getStringArray(R.array.activitycategories_array);
+        //this is how you build the list and only display the top level item once
+        //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
+        String[] DisplayRow = new HashSet<String>(Arrays.asList(activityCategories)).toArray(new String[0]);
+        sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        Collections.sort(sortedArrayList);
+        String[] sortedArray = sortedArrayList.toArray(new String[0]);
+        setListAdapter(new AdapterForMain(this, sortedArray));
+    }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+
+        //get selected items
+        String itemValue = (String) getListAdapter().getItem(position);
+        Intent i = new Intent("com.robboapps.ottawa4kidstest6.SecondActivity");
+        //---use putExtra() to add new nam/value pairs---
+        i.putExtra("str1", itemValue);
+        startActivity(i);
+        //Toast.makeText(this, selectedValue, Toast.LENGTH_SHORT).show();
+
+    }
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +72,5 @@ public class MainActivity extends ListActivity {
             }
         });
     }
-
+*/
 }

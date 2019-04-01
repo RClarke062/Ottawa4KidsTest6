@@ -22,7 +22,6 @@ import java.util.List;
 public class ThirdActivity extends ListActivity {
 
     String[] outsidestuffchoice;
-    //String[] Options = new String[6];
     String[] Options;
     String[] Row;
     String[] SelectionArray;

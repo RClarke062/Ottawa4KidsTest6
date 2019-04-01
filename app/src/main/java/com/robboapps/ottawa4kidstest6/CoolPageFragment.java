@@ -58,7 +58,7 @@ public class CoolPageFragment extends Fragment{
                              Bundle savedInstanceState) {
         //assetManager = getContext().getAssets();
         //if (assetManager !=null);
-       if (getActivity() !=null) assetManager = getContext().getAssets();
+       //if (getActivity() !=null) assetManager = getContext().getAssets();
         //try{
             //if (getActivity() !=null){
                 //assetManager = getContext().getAssets();
@@ -111,6 +111,5 @@ public class CoolPageFragment extends Fragment{
                 return view;
         }
 
-//return view;
     }
 }

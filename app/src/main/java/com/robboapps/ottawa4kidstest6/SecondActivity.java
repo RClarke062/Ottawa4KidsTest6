@@ -27,22 +27,22 @@ public class SecondActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        //setContentView(R.layout.activity_second);
         Calendar calendar = Calendar.getInstance();
         int month = calendar.get(Calendar.MONTH) + 1;
         System.out.println("ZIPPY" + month);
 
-        final ListView lstView = getListView();
-        lstView.setTextFilterEnabled(true);
+        //final ListView lstView = getListView();
+        //lstView.setTextFilterEnabled(true);
 
         activityCategory = getIntent().getStringExtra("str1");
 
-        switch (activityCategory){
+        switch (activityCategory) {
 
             case ("Indoor Action"):
-                if (month==10){
+                if (month == 10) {
                     categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
-                }else {
+                } else {
                     categoryArray = getResources().getStringArray(R.array.indooraction_array);
                 }
                 Type = new String[categoryArray.length];
@@ -54,9 +54,9 @@ public class SecondActivity extends ListActivity {
                 break;
             case ("Outdoor Action"):
 
-                if (month> 4 && month<10){
+                if (month > 4 && month < 10) {
                     categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
-                }else {
+                } else {
                     categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
                 }
                 Type = new String[categoryArray.length];
@@ -113,23 +113,19 @@ public class SecondActivity extends ListActivity {
             }
 
             */
-                //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
+        //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
         //Arrays.sort(Type);
         String[] DisplayRow = new HashSet<String>(Arrays.asList(Type)).toArray(new String[0]);
         sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
         Collections.sort(sortedArrayList);
-        System.out.println("ZIPPY" + sortedArrayList);
+        String[] sortedArray = sortedArrayList.toArray(new String[0]);
+        setListAdapter(new AdapterForSecond(this, sortedArray));
+        //System.out.println("ZIPPY" + sortedArrayList);
 
-        //Arrays.sort(DisplayRow);
-                //display only unique items
-        //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DisplayRow);
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sortedArrayList));
-
-
-                lstView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                        String itemValue = (String) lstView.getItemAtPosition(position);
+    }
+        @Override
+        protected void onListItemClick(ListView l, View v, int position, long id) {
+            String itemValue = (String) getListAdapter().getItem(position);
                         Intent i = new Intent("com.robboapps.ottawa4kidstest6.ThirdActivity");
                         //---use putExtra() to add new nam/value pairs---
                         //i.putExtra("str1", itemValue);
@@ -139,8 +135,6 @@ public class SecondActivity extends ListActivity {
                         i.putExtras(extras);
                         startActivity(i);
                     }
-                });
-            }
 
         }
 
