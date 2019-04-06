@@ -39,7 +39,7 @@ public class ThirdActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        //setContentView(R.layout.activity_third);
         Calendar calendar = Calendar.getInstance();
         int month = calendar.get(Calendar.MONTH) + 1;
         System.out.println("ZIPPY" + month);
@@ -49,15 +49,15 @@ public class ThirdActivity extends ListActivity {
         activityCategory = extras.getString("ACTIVITYCATEGORY");
         System.out.println("XANADU91 activityType =  " + activityType + "activityCategory =  " + activityCategory);
 
-        final ListView lstView = getListView();
-        lstView.setTextFilterEnabled(true);
+        //final ListView lstView = getListView();
+        //lstView.setTextFilterEnabled(true);
 
-        switch (activityCategory){
+        switch (activityCategory) {
 
             case ("Indoor Action"):
-                if (month==10){
+                if (month == 10) {
                     categoryArray = getResources().getStringArray(R.array.indooractionoctober_array);
-                }else {
+                } else {
                     categoryArray = getResources().getStringArray(R.array.indooraction_array);
                 }
                 vendorArrayList = new ArrayList<>();
@@ -70,12 +70,12 @@ public class ThirdActivity extends ListActivity {
                     }
                     vendorArray = vendorArrayList.toArray(new String[0]);
                     SelectionArray = selectionArrayList.toArray(new String[0]);
-                    }
+                }
                 break;
             case ("Outdoor Action"):
-                if (month> 4 && month<10){
+                if (month > 4 && month < 10) {
                     categoryArray = getResources().getStringArray(R.array.outdooractionsummer_array);
-                }else {
+                } else {
                     categoryArray = getResources().getStringArray(R.array.outdooractionwinter_array);
                 }
                 vendorArrayList = new ArrayList<>();
@@ -138,59 +138,35 @@ public class ThirdActivity extends ListActivity {
                 break;
         }
 
-        /*
-        outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
-        for (int i = 0; i < outsidestuffchoice.length; i++) {
-            Options = outsidestuffchoice[i].split(",");
-            if (Options[1].equals(getIntent().getStringExtra("str1"))) {
-               Count = Count + 1;
-            }
-        }
-
-        Row = new String[Count];
-        SelectionArray = new String[Count];
-        //outsidestuffchoice = getResources().getStringArray(R.array.outsidestuff_array);
-
-        Count = 0;
-
-        for (int a = 0; a < outsidestuffchoice.length; a++) {
-            Options = outsidestuffchoice[a].split(",");
-            if (Options[1].equals(getIntent().getStringExtra("str1"))) {
-                Row[Count] = Options[2];
-                SelectionArray[Count] = Options[6];
-                Count = Count + 1;
-            }
-        }
-*/
         Arrays.sort(vendorArray);
-        String[] DisplayRow = new HashSet<String>(Arrays.asList(vendorArray)).toArray(new String[0]);
-        sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
-        Collections.sort(sortedArrayList);
+        //String[] DisplayRow = new HashSet<String>(Arrays.asList(vendorArray)).toArray(new String[0]);
+        //HashSet<String> HashArrayList = new HashSet<String>(vendorArrayList);
+        //sortedArrayList = new ArrayList<>(HashArrayList);
+        //sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        //Collections.sort(sortedArrayList);
 
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sortedArrayList));
-
-        lstView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?>parent,View v, int position, long id){
-                String  itemValue    = (String) lstView.getItemAtPosition(position);
-                for (int b = 0; b < vendorArray.length; b++) {
-                    if (vendorArray[b].equals(itemValue)) {
-                        SelectionOptions = SelectionArray[b];
-                    }
-                }
-                System.out.println("XANADU56itemValue&Option " + itemValue + SelectionOptions);
-                Intent i = new Intent("com.robboapps.ottawa4kidstest6.FourthActivity");
-                //---use putExtra() to add new nam/value pairs---
-                Bundle extras = new Bundle();
-                extras.putString("VENDORCHOICE", itemValue);
-                extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                extras.putString("ACTIVITYCATEGORY", activityCategory);
-                i.putExtras(extras);
-                startActivity(i);
-                //i.putExtra("str1", itemValue);
-                //startActivity(i);
-            }
-        });
+        //setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sortedArrayList));
+        setListAdapter(new AdapterForThird(this, vendorArray));
     }
 
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        String itemValue = (String) getListAdapter().getItem(position);
+        for (int b = 0; b < vendorArray.length; b++) {
+            if (vendorArray[b].equals(itemValue)) {
+                SelectionOptions = SelectionArray[b];
+            }
+        }
+        System.out.println("XANADU56itemValue&Option " + itemValue + SelectionOptions);
+        Intent i = new Intent("com.robboapps.ottawa4kidstest6.FourthActivity");
+        //---use putExtra() to add new nam/value pairs---
+        Bundle extras = new Bundle();
+        extras.putString("VENDORCHOICE", itemValue);
+        extras.putString("SELECTIONOPTIONS", SelectionOptions);
+        extras.putString("ACTIVITYCATEGORY", activityCategory);
+        i.putExtras(extras);
+        startActivity(i);
+        //i.putExtra("str1", itemValue);
+        //startActivity(i);
+    }
 }

@@ -115,8 +115,10 @@ public class SecondActivity extends ListActivity {
             */
         //finds unique elements in the Row Array @ Java 7 level (Java 8 has simpler method)
         //Arrays.sort(Type);
-        String[] DisplayRow = new HashSet<String>(Arrays.asList(Type)).toArray(new String[0]);
-        sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        //String[] DisplayRow = new HashSet<String>(Arrays.asList(Type)).toArray(new String[0]);
+        //sortedArrayList = new ArrayList<String>(Arrays.asList(DisplayRow));
+        HashSet<String> HashArrayList = new HashSet<String>(Arrays.asList(Type));
+        sortedArrayList = new ArrayList<>(HashArrayList);
         Collections.sort(sortedArrayList);
         String[] sortedArray = sortedArrayList.toArray(new String[0]);
         setListAdapter(new AdapterForSecond(this, sortedArray));
