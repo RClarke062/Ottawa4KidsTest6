@@ -1,5 +1,6 @@
 package com.robboapps.ottawa4kidstest6;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -7,7 +8,7 @@ import android.webkit.WebView;
 
 import java.util.Calendar;
 
-public class WebSiteActivity extends AppCompatActivity {
+public class WebSiteActivity extends Activity {
 
     String[] outsidestuffchoice;
     String[] Options = new String[6];

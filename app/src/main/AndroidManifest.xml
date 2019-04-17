@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyDahiOLlocXc9-T7v4t6vmvf4uQLe-6lbI" />
 
         <activity
             android:name="com.robboapps.ottawa4kidstest6.MainActivity"

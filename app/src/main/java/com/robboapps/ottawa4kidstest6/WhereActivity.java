@@ -1,6 +1,7 @@
 package com.robboapps.ottawa4kidstest6;
 
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,7 +22,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 //public class WhereActivity extends FragmentActivity implements OnMapReadyCallback {
-public class WhereActivity extends AppCompatActivity {
+public class WhereActivity extends Activity {
     GoogleMap mMap;
     String[] outsidestuffchoice;
     String[] Options = new String[6];
