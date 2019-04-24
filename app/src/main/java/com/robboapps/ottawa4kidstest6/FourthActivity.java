@@ -1,17 +1,19 @@
 package com.robboapps.ottawa4kidstest6;
 
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import java.util.Arrays;
 
 
-public class FourthActivity extends ListActivity {
+public class FourthActivity extends Activity {
 
     String[] details;
     String VendorChoice;
@@ -21,7 +23,8 @@ public class FourthActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_fourth);
+        setContentView(R.layout.activity_fourth);
+        ListView listView = findViewById(R.id.list);
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         SelectionOptions = extras.getString("SELECTIONOPTIONS");
@@ -50,7 +53,11 @@ public class FourthActivity extends ListActivity {
         System.out.println("XANADU56c  " + Arrays.toString(details));
         //Toast.makeText(this, getIntent().getStringExtra("str1"), Toast.LENGTH_SHORT).show();
 
-        setListAdapter(new AdapterForFourth(this, details));
+        //setListAdapter(new AdapterForFourth(this, details));
+
+        AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
+        listView.setAdapter(adapterForFourth);
+
     }
         @Override
         protected void onListItemClick (ListView l, View v,int position, long id){
