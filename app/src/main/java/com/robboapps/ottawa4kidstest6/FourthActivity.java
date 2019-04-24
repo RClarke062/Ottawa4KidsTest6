@@ -24,7 +24,7 @@ public class FourthActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
-        ListView listView = findViewById(R.id.list);
+        final ListView listView = findViewById(R.id.list);
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         SelectionOptions = extras.getString("SELECTIONOPTIONS");
@@ -55,60 +55,63 @@ public class FourthActivity extends Activity {
 
         //setListAdapter(new AdapterForFourth(this, details));
 
-        AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
+        final AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
         listView.setAdapter(adapterForFourth);
 
-    }
-        @Override
-        protected void onListItemClick (ListView l, View v,int position, long id){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            String itemValue = (String) getListAdapter().getItem(position);
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-            switch (itemValue) {
+                String itemValue = (String) listView.getItemAtPosition(position);
 
-                case "WebSite":
-                    Intent i = new Intent("com.robboapps.ottawa4kidstest6.WebSiteActivity");
-                    //---use putExtra() to send the ThirdActivity choice to the WebSite Activity---
-                    //Bundle extras = getIntent().getExtras();
-                    Bundle extras = new Bundle();
-                    extras.putString("VENDORCHOICE", VendorChoice);
-                    extras.putString("ACTIVITYCATEGORY", activityCategory);
-                    i.putExtras(extras);
-                    startActivity(i);
-                    break;
-                case "Where is It":
-                    Intent a = new Intent("com.robboapps.ottawa4kidstest6.WhereActivity");
-                    //---use putExtra() to send the ThirdActivity choice to the Where Activity---
-                    //Bundle extras2 = getIntent().getExtras();
-                    //extras.putString("VENDORCHOICE", VendorChoice);
-                    //extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                    //a.putExtra("str1", VendorChoice);
-                    Bundle extras2 = new Bundle();
-                    extras2.putString("VENDORCHOICE", VendorChoice);
-                    extras2.putString("ACTIVITYCATEGORY", activityCategory);
-                    a.putExtras(extras2);
-                    startActivity(a);
-                    break;
-                case "Side Trips for Adults":
-                    Intent b = new Intent("com.robboapps.ottawa4kidstest6.SideTripsActivity");
-                    //---use putExtra() to send the ThirdActivity choice to the SideTrips Activity---
-                    //extras.putString("VENDORCHOICE", VendorChoice);
-                    //extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                    //b.putExtra("str1", VendorChoice);
-                    Bundle extras3 = new Bundle();
-                    extras3.putString("VENDORCHOICE", VendorChoice);
-                    extras3.putString("ACTIVITYCATEGORY", activityCategory);
-                    b.putExtras(extras3);
-                    startActivity(b);
-                    break;
-                case "Whats Cool":
-                    Intent c = new Intent("com.robboapps.ottawa4kidstest6.WhatsCoolActivity");
-                    //---use putExtra() to send the ThirdActivity choice to the WhatsCool Activity---
-                    //extras.putString("VENDORCHOICE", VendorChoice);
-                    //extras.putString("SELECTIONOPTIONS", SelectionOptions);
-                    c.putExtra("str1", VendorChoice);
-                    startActivity(c);
-                    break;
+                switch (itemValue) {
+
+                    case "WebSite":
+                        Intent i = new Intent("com.robboapps.ottawa4kidstest6.WebSiteActivity");
+                        //---use putExtra() to send the ThirdActivity choice to the WebSite Activity---
+                        //Bundle extras = getIntent().getExtras();
+                        Bundle extras = new Bundle();
+                        extras.putString("VENDORCHOICE", VendorChoice);
+                        extras.putString("ACTIVITYCATEGORY", activityCategory);
+                        i.putExtras(extras);
+                        startActivity(i);
+                        break;
+                    case "Where is It":
+                        Intent a = new Intent("com.robboapps.ottawa4kidstest6.WhereActivity");
+                        //---use putExtra() to send the ThirdActivity choice to the Where Activity---
+                        //Bundle extras2 = getIntent().getExtras();
+                        //extras.putString("VENDORCHOICE", VendorChoice);
+                        //extras.putString("SELECTIONOPTIONS", SelectionOptions);
+                        //a.putExtra("str1", VendorChoice);
+                        Bundle extras2 = new Bundle();
+                        extras2.putString("VENDORCHOICE", VendorChoice);
+                        extras2.putString("ACTIVITYCATEGORY", activityCategory);
+                        a.putExtras(extras2);
+                        startActivity(a);
+                        break;
+                    case "Side Trips for Adults":
+                        Intent b = new Intent("com.robboapps.ottawa4kidstest6.SideTripsActivity");
+                        //---use putExtra() to send the ThirdActivity choice to the SideTrips Activity---
+                        //extras.putString("VENDORCHOICE", VendorChoice);
+                        //extras.putString("SELECTIONOPTIONS", SelectionOptions);
+                        //b.putExtra("str1", VendorChoice);
+                        Bundle extras3 = new Bundle();
+                        extras3.putString("VENDORCHOICE", VendorChoice);
+                        extras3.putString("ACTIVITYCATEGORY", activityCategory);
+                        b.putExtras(extras3);
+                        startActivity(b);
+                        break;
+                    case "Whats Cool":
+                        Intent c = new Intent("com.robboapps.ottawa4kidstest6.WhatsCoolActivity");
+                        //---use putExtra() to send the ThirdActivity choice to the WhatsCool Activity---
+                        //extras.putString("VENDORCHOICE", VendorChoice);
+                        //extras.putString("SELECTIONOPTIONS", SelectionOptions);
+                        c.putExtra("str1", VendorChoice);
+                        startActivity(c);
+                        break;
+                }
             }
-        }
+        });
     }
+}
