@@ -55,15 +55,18 @@ public class FourthActivity extends Activity {
 
         //setListAdapter(new AdapterForFourth(this, details));
 
-        final AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
+        AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
         listView.setAdapter(adapterForFourth);
+        System.out.println("FLIPPER1  ");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
+
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 String itemValue = (String) listView.getItemAtPosition(position);
+                //String itemValue = "WebSite";
+                System.out.println("FLIPPER  " + itemValue );
 
                 switch (itemValue) {
 

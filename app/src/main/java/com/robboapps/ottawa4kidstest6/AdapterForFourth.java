@@ -33,15 +33,36 @@ public class AdapterForFourth extends BaseAdapter {
     public long getItemId(int i) {
         return 0;
     }
+/*
+    View.OnClickListener listOnClickListener = new View.OnClickListener()
+    {
 
+        @Override
+        public void onClick(View v)
+        {
+            /// your data .getTag()
+            // process onClickListener for image
+        }
+    };
+*/
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.fourth_adapter, viewGroup, false);
+
+
+
+
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView2);
         TextView textView = (TextView) view.findViewById(R.id.textView);
         imageView.setImageResource(R.drawable.b);
         textView.setText(values[i]);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         switch (values[i]) {
 
