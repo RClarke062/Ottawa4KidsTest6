@@ -21,6 +21,7 @@ public class FourthActivity extends Activity {
     String VendorChoice;
     String SelectionOptions;
     String activityCategory;
+    ArrayList<String> detailsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class FourthActivity extends Activity {
                 break;
         }
         System.out.println("XANADU56c  " + Arrays.toString(details));
-        ArrayList<String> detailsList = new ArrayList<String>(Arrays.asList(details));
+        detailsList = new ArrayList<String>(Arrays.asList(details));
         //Toast.makeText(this, getIntent().getStringExtra("str1"), Toast.LENGTH_SHORT).show();
 
         //setListAdapter(new AdapterForFourth(this, details));
@@ -69,7 +70,7 @@ public class FourthActivity extends Activity {
 
                 String itemValue = (String) listView.getItemAtPosition(position);
                 //String itemValue = "WebSite";
-                System.out.println("FLIPPER  " + itemValue );
+                System.out.println("FLIPPER 5 " + itemValue );
 
                 switch (itemValue) {
 

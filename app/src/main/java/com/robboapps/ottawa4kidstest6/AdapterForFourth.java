@@ -19,6 +19,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
     //private final Context context;
     //private final ArrayList<String> values;
     String value2;
+    String value;
 
     public AdapterForFourth(Context context, ArrayList<String> values) {
         super(context, 0, values);
@@ -35,7 +36,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.fourth_adapter, parent, false);
         }
 
-        String value = getItem(position);
+        value = getItem(position);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView2);
         TextView textView = (TextView) convertView.findViewById(R.id.textView);
         imageView.setImageResource(R.drawable.b);
@@ -52,7 +53,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
             }
         });
 
-        switch (value2) {
+        switch (value) {
 
             case ("WebSite"):
                 convertView.setBackgroundColor(Color.parseColor("#e0af1f"));
@@ -73,6 +74,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
         }
 
         return convertView;
+        //return super.getView(position, convertView, parent);
     }
 }
 
