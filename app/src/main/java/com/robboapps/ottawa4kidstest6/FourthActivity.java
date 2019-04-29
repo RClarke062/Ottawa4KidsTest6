@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -51,11 +53,12 @@ public class FourthActivity extends Activity {
                 break;
         }
         System.out.println("XANADU56c  " + Arrays.toString(details));
+        ArrayList<String> detailsList = new ArrayList<String>(Arrays.asList(details));
         //Toast.makeText(this, getIntent().getStringExtra("str1"), Toast.LENGTH_SHORT).show();
 
         //setListAdapter(new AdapterForFourth(this, details));
 
-        AdapterForFourth adapterForFourth = new AdapterForFourth(this, details);
+        AdapterForFourth adapterForFourth = new AdapterForFourth(this, detailsList);
         listView.setAdapter(adapterForFourth);
         System.out.println("FLIPPER1  ");
 

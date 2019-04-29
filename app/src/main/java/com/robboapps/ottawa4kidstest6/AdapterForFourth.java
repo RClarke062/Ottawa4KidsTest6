@@ -2,88 +2,77 @@ package com.robboapps.ottawa4kidstest6;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
-public class AdapterForFourth extends BaseAdapter {
-    private final Context context;
-    private final String[] values;
+import java.util.ArrayList;
+import java.util.List;
+//use arrayadaptor instead?
+public class AdapterForFourth extends ArrayAdapter<String> {
+    //private final Context context;
+    //private final ArrayList<String> values;
+    String value2;
 
-    public AdapterForFourth(Context context, String[] values) {
-        this.context = context;
-        this.values = values;
+    public AdapterForFourth(Context context, ArrayList<String> values) {
+        super(context, 0, values);
+        //this.context = context;
+        //this.values = values;
     }
+
+    //ArrayList<String> valuesLocal = values;
 
     @Override
-    public int getCount() {
-        return values.length;
-    }
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-    @Override
-    public Object getItem(int i) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-/*
-    View.OnClickListener listOnClickListener = new View.OnClickListener()
-    {
-
-        @Override
-        public void onClick(View v)
-        {
-            /// your data .getTag()
-            // process onClickListener for image
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.fourth_adapter, parent, false);
         }
-    };
-*/
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view = inflater.inflate(R.layout.fourth_adapter, viewGroup, false);
 
-
-
-
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView2);
-        TextView textView = (TextView) view.findViewById(R.id.textView);
+        String value = getItem(position);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView2);
+        TextView textView = (TextView) convertView.findViewById(R.id.textView);
         imageView.setImageResource(R.drawable.b);
-        textView.setText(values[i]);
+        textView.setText(value);
+        //textView.setOnClickListener(new View.OnClickListener() {
+        textView.setTag(position);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                int position = (Integer) view.getTag();
+                // Access the row position here to get the correct data item
+                value2 = getItem(position);
+                System.out.println("FLIPPER what was clicked  " + value2);
             }
         });
 
-        switch (values[i]) {
+        switch (value2) {
 
             case ("WebSite"):
-                view.setBackgroundColor(Color.parseColor("#e0af1f"));
+                convertView.setBackgroundColor(Color.parseColor("#e0af1f"));
                 break;
 
             case ("Where is It"):
-                view.setBackgroundColor(Color.parseColor("#e0af1f"));
+                convertView.setBackgroundColor(Color.parseColor("#e0af1f"));
                 break;
 
             case ("Side Trips for Adults"):
-                view.setBackgroundColor(Color.parseColor("#ba160c"));
+                convertView.setBackgroundColor(Color.parseColor("#ba160c"));
                 break;
 
             case ("Whats Cool"):
-                view.setBackgroundColor(Color.parseColor("#ff00ff"));
+                convertView.setBackgroundColor(Color.parseColor("#ff00ff"));
                 break;
 
         }
-        return view;
+
+        return convertView;
     }
 }
 
