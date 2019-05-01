@@ -20,12 +20,38 @@ public class AdapterForFourth extends ArrayAdapter<String> {
     //private final ArrayList<String> values;
     String value2;
     String value;
+    int valuesSize;
+    List<String> localValues;
+    //ArrayList<String> value3;
 
-    public AdapterForFourth(Context context, ArrayList<String> values) {
+    public AdapterForFourth (Context context, ArrayList<String> values) {
         super(context, 0, values);
+        System.out.println("FLIPPER85"  + values.size());
+        valuesSize = values.size();
+        localValues = values;
+        //super(context, R.layout.fourth_adapter);
+        //this.context = context;
+        //this.values = values;
+        //this.names = names;
         //this.context = context;
         //this.values = values;
     }
+
+    @Override
+    public int getCount() {
+        return valuesSize;
+    }
+
+    @Override
+    public String getItem(int i) {
+        return localValues.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
 
     //ArrayList<String> valuesLocal = values;
 
@@ -37,11 +63,12 @@ public class AdapterForFourth extends ArrayAdapter<String> {
         }
 
         value = getItem(position);
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView2);
+        //ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView2);
         TextView textView = (TextView) convertView.findViewById(R.id.textView);
-        imageView.setImageResource(R.drawable.b);
+        //imageView.setImageResource(R.drawable.b);
         textView.setText(value);
         //textView.setOnClickListener(new View.OnClickListener() {
+        /*
         textView.setTag(position);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +79,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
                 System.out.println("FLIPPER what was clicked  " + value2);
             }
         });
-
+*/
         switch (value) {
 
             case ("WebSite"):
@@ -60,7 +87,7 @@ public class AdapterForFourth extends ArrayAdapter<String> {
                 break;
 
             case ("Where is It"):
-                convertView.setBackgroundColor(Color.parseColor("#e0af1f"));
+                convertView.setBackgroundColor(Color.parseColor("#66ff33"));
                 break;
 
             case ("Side Trips for Adults"):
