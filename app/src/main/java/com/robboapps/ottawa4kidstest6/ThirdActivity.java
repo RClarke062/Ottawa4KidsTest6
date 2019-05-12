@@ -48,7 +48,7 @@ public class ThirdActivity extends ListActivity {
         activityType = extras.getString("ACTIVITYTYPE");
         activityCategory = extras.getString("ACTIVITYCATEGORY");
         System.out.println("XANADU91 activityType =  " + activityType + "activityCategory =  " + activityCategory);
-
+        getActionBar().setTitle(activityType);
         //final ListView lstView = getListView();
         //lstView.setTextFilterEnabled(true);
 
@@ -164,6 +164,7 @@ public class ThirdActivity extends ListActivity {
         extras.putString("VENDORCHOICE", itemValue);
         extras.putString("SELECTIONOPTIONS", SelectionOptions);
         extras.putString("ACTIVITYCATEGORY", activityCategory);
+        extras.putString("ACTIVITYTYPE", activityType);
         i.putExtras(extras);
         startActivity(i);
         //i.putExtra("str1", itemValue);

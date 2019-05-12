@@ -19,11 +19,12 @@
     <TextView
         android:id="@+id/textView"
         android:textSize="30sp"
-        android:layout_width="306dp"
-        android:layout_height="74dp"
+        android:layout_width="wrap_content"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="3dp"
+        android:layout_height="74dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:fontFamily="@font/markerfelt"
-        android:text="TextView" />
+        android:gravity="center_horizontal"/>
 
 </LinearLayout>

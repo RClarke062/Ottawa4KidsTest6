@@ -32,11 +32,12 @@ public class SecondActivity extends ListActivity {
         int month = calendar.get(Calendar.MONTH) + 1;
         System.out.println("ZIPPY" + month);
 
+
         //final ListView lstView = getListView();
         //lstView.setTextFilterEnabled(true);
 
         activityCategory = getIntent().getStringExtra("str1");
-
+        getActionBar().setTitle(activityCategory);
         switch (activityCategory) {
 
             case ("Indoor Action"):

@@ -24,6 +24,7 @@ public class WhatsCoolActivity extends FragmentActivity {
         System.out.println("XANADU First");
         WhichActivity = getIntent().getStringExtra("str1");
         System.out.println("XANADU What was Sent" + WhichActivity);
+        getActionBar().setTitle(WhichActivity);
         swipeAdaptor = new CoolSwipeAdaptor(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdaptor);
         //Toast.makeText(this, getIntent().getStringExtra("str1"), Toast.LENGTH_SHORT).show();

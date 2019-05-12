@@ -29,6 +29,7 @@ public class WebSiteActivity extends Activity {
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         activityCategory = extras.getString("ACTIVITYCATEGORY");
+        getActionBar().setTitle(VendorChoice);
         System.out.println("XANADU56b  " + VendorChoice);
 
         switch (activityCategory){

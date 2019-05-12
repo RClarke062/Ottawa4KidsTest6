@@ -63,6 +63,7 @@ public class SideTripsActivity extends FragmentActivity implements OnMapReadyCal
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         activityCategory = extras.getString("ACTIVITYCATEGORY");
+        getActionBar().setTitle(VendorChoice);
         System.out.println("XANADU56b choice and category  " + VendorChoice + activityCategory);
 
         //Choice = getIntent().getStringExtra("str1");

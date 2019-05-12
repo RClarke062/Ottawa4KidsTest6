@@ -4,6 +4,11 @@ package com.robboapps.ottawa4kidstest6;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,21 +30,55 @@ public class FourthActivity extends Activity {
     String VendorChoice;
     String SelectionOptions;
     String activityCategory;
+    String activityType;
+    String[] imgList;
     ArrayList<String> detailsList;
+    ArrayList<Bitmap> picString = new ArrayList<>();
+    AssetManager assetManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
         final ListView listView = findViewById(R.id.list);
-        //TextView textView = findViewById(R.id.textView2);
-        ImageView imageView = findViewById(R.id.imageView2);
+
+
         final Bundle extras = getIntent().getExtras();
         VendorChoice = extras.getString("VENDORCHOICE");
         SelectionOptions = extras.getString("SELECTIONOPTIONS");
         activityCategory = extras.getString("ACTIVITYCATEGORY");
-        System.out.println("XANADU56b  " + VendorChoice + SelectionOptions);
+        activityType = extras.getString("ACTIVITYTYPE");
+        getActionBar().setTitle(VendorChoice);
+        System.out.println("XANADU56b  " + VendorChoice + SelectionOptions +activityCategory);
 
+        //TextView textView = findViewById(R.id.textView2);
+        //textView.setText(VendorChoice);
+        //textView.setBackgroundColor(Color.parseColor("#bdbebd"));
+        //textView.setTypeface(null, Typeface.BOLD);
+
+        ImageView imageView = findViewById(R.id.imageView2);
+        try {
+
+            // getAssets has a warning becuase it is possible that the fragment
+            // will not be attached to the main activity.  Separate try statement does not
+            // get rid of the warning but StackOverflow said not an issue
+            assetManager = getAssets();
+            imgList = assetManager.list("A_Types");
+            System.out.println("XANADU 03" + Arrays.toString(imgList));
+            //int numImages = imgList.length;
+            for (int i = 0; i < imgList.length; i++) {
+                picString.add(i, BitmapFactory.decodeStream(assetManager.open("A_Types" +"/" + imgList[i])));
+                //System.out.print("XANADU15  " + imgList[i] + " ");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < imgList.length; i++) {
+            System.out.println("ZIPPY12  " + activityCategory + "  " + imgList[i]);
+            if ((activityType + ".png").equals(imgList[i])) {
+                imageView.setImageBitmap(picString.get(i));
+            }
+        }
         //final ListView lstView = getListView();
         //lstView.setTextFilterEnabled(true);
 

@@ -43,9 +43,7 @@ public class AdapterForSecond extends ArrayAdapter<String> {
 
 
         try {
-            //if (getActivity().getAssets() !=null){
-            //assetManager = getContext().getAssets();
-            //}
+
             // getAssets has a warning becuase it is possible that the fragment
             // will not be attached to the main activity.  Separate try statement does not
             // get rid of the warning but StackOverflow said not an issue
